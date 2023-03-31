@@ -4,5 +4,5 @@ Over The Air Update
 
 ## Design Principles
 <p align="center">
-  <img width="1200" src="../wallaceelston/images/Auxiliary_Boards_SW_Builds.jpg">
+  <img width="1200" src="./images/PoC_Flexible_Platform.jpg">
   </p>
