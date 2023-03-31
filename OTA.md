@@ -3,6 +3,9 @@ Over The Air Update
 # Table of Contents
 
 ## Design Principles
+
 <p align="center">
-  <img width="1200" src="./images/PoC_Flexible_Platform.jpg">
+  <img width="1200" src="./images/poc_flexible_platform.jpg">
   </p>
+
+Testing all lower case
