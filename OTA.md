@@ -8,4 +8,4 @@ Over The Air Update
   <img width="1200" src="./images/poc_flexible_platform_1.jpg">
   </p>
 
-Testing all lower case
+Testing all lower case including root directory Images to images.
