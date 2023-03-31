@@ -85,6 +85,7 @@ PNC is the Overall Model Number for a specific BOM to be built and distributed t
 
 
 ## Over the Air Overall Process
+This should reflect the Overall Process for the Over the Air Update.
 <p align="center">
   <img width="600" src="./images/over_the_air_overall_process.jpg">
   </p>
