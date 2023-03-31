@@ -7,6 +7,3 @@ Over The Air Update
 <p align="center">
   <img width="1200" src="./images/poc_flexible_platform_1.jpg">
   </p>
-
-![MarineGEO circle logo](./images/poc_flexible_platform_1.jpg)
-
