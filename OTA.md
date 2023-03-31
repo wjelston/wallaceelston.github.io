@@ -12,6 +12,7 @@ Over The Air Update
 1. [Main Control Software Builds](#main-control-software-builds)
 1. [Auxiliary Boards Software Builds](#auxiliary-boards-software-builds)
 1. [Bundle Script](#bundle-script)
+1. [Cloud Delivery Process](#cloud-delivery-method)
 1. [json Bundle Script](#json-bundle-script)
 
 
@@ -85,6 +86,15 @@ PNC is the Overall Model Number for a specific BOM to be built and distributed t
 
 ## User Interface Software Builds
 <p align="center">
+  <img width="600" src="./images/over_the_air_overall_process.jpg">
+  </p>
+
+<!-- Notes
+
+-->
+
+## User Interface Software Builds
+<p align="center">
   <img width="600" src="./images/user_interface_sw_builds.jpg">
   </p>
 
@@ -104,6 +114,15 @@ PNC is the Overall Model Number for a specific BOM to be built and distributed t
 ## Auxiliary Boards Software Builds
 <p align="center">
   <img width="600" src="./images/auxiliary_boards_sw_builds.jpg">
+  </p>
+
+<!-- Notes
+
+-->
+
+## Connectivity Boards Software Builds
+<p align="center">
+  <img width="600" src="./images/connectivity_sw_builds.jpg">
   </p>
 
 <!-- Notes
