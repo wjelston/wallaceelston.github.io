@@ -1,0 +1,10 @@
+{
+  // These extensions might cause conflicts and should be disabled of uninstalled.
+  // See: https://github.com/panoply/vscode-liquid#extension-conflicts
+  //
+  "unwantedRecommendations": [
+    "neilding.language-liquid",
+    "Shopify.theme-check-vscode",
+    "killalau.vscode-liquid-snippets"
+  ]
+}
