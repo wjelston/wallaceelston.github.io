@@ -140,7 +140,7 @@ This should reflect the Overall Process for the Over the Air Update.
 
 ## Bundle Script
 <p align="center">
-  <img width="200" src="./images/ota_bundle_delivery.jpg">
+  <img width="1000" src="./images/ota_bundle_delivery.jpg">
   </p>
 
 <!-- Notes
