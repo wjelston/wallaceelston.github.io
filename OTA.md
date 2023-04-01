@@ -8,9 +8,11 @@ Over The Air Update
 1. [Kattegatt PoC](#kattegatt-poc)
 1. [Software Team Delivery Process and Tool Chain](#software-team-delivery-process-and-tool-chain)
 1. [Software Team Tech Stack MicroServices Delivery](#software-team-tech-stack-microservices-delivery)
+1. [Over the Air Overall Process](#over-the-air-overall-process)
 1. [User Interface Software Builds](#user-interface-software-builds)
 1. [Main Control Software Builds](#main-control-software-builds)
 1. [Auxiliary Boards Software Builds](#auxiliary-boards-software-builds)
+1. [Connectivity Board Software Builds](#connectivity-boards-software-builds)
 1. [Bundle Script](#bundle-script)
 1. [json Bundle Script](#json-bundle-script)
 
@@ -78,9 +80,11 @@ PNC is the Overall Model Number for a specific BOM to be built and distributed t
 
 
 
-## Software Team Tech Stack MicroServices Delivery
+
+## Over the Air Overall Process
+This should reflect the Overall Process for the Over the Air Update.
 <p align="center">
-  <img width="600" src="./images/tech_stack_delivery_teams.jpg">
+  <img width="1200" src="./images/over_the_air_overall_process.jpg">
   </p>
 
 <!-- Notes
@@ -88,10 +92,9 @@ PNC is the Overall Model Number for a specific BOM to be built and distributed t
 -->
 
 
-## Over the Air Overall Process
-This should reflect the Overall Process for the Over the Air Update.
+## Software Team Tech Stack MicroServices Delivery
 <p align="center">
-  <img width="1000" src="./images/over_the_air_overall_process.jpg">
+  <img width="800" src="./images/tech_stack_delivery_teams.jpg">
   </p>
 
 <!-- Notes
@@ -101,7 +104,7 @@ This should reflect the Overall Process for the Over the Air Update.
 
 ## User Interface Software Builds
 <p align="center">
-  <img width="600" src="./images/user_interface_sw_builds.jpg">
+  <img width="800" src="./images/user_interface_sw_builds.jpg">
   </p>
 
 <!-- Notes
@@ -110,7 +113,7 @@ This should reflect the Overall Process for the Over the Air Update.
 
 ## Main Control Software Builds
 <p align="center">
-  <img width="600" src="./images/main_control_sw_builds.jpg">
+  <img width="800" src="./images/main_control_sw_builds.jpg">
   </p>
 
 <!-- Notes
@@ -119,7 +122,16 @@ This should reflect the Overall Process for the Over the Air Update.
 
 ## Auxiliary Boards Software Builds
 <p align="center">
-  <img width="600" src="./images/auxiliary_boards_sw_builds.jpg">
+  <img width="800" src="./images/auxiliary_boards_sw_builds.jpg">
+  </p>
+
+<!-- Notes
+
+-->
+
+## Connectivity Boards Software Builds
+<p align="center">
+  <img width="800" src="./images/auxiliary_boards_sw_builds.jpg">
   </p>
 
 <!-- Notes
