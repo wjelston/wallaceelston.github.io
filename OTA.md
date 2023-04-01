@@ -31,6 +31,10 @@ PNC is the Overall Model Number for a specific BOM to be built and distributed t
 1. As a User I want to be able to update my product to the latest software and configurations updates.
 1. As a User I want to be able to enable future capabilities my product may initiatilly not support, by software and configuration updates.
 1. As a User I want to be able to add and remove apps from my product to tailor my product to my specific usage and needs.
+1. As a User I should be able to choose when and which updates i want to apply to my product.  
+1. As a User I should be able to apply full or partial updates.
+1. As a User I should have a recovery mechanism such as Factory Defaults to return my product to a usable condition should an outage occur such as power, internet service provider, or WiFi Network.
+1. As a User I expect the full software update process from start to end to take no more than 10 minutes, as these are my expectation from other devices I currently use.
 
 
 ## Kattegatt PoC
