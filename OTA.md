@@ -103,6 +103,7 @@ This should reflect the Overall Process for the Over the Air Update.
 
 
 ## User Interface Software Builds
+- Hardware in Loop Testing
 <p align="center">
   <img width="800" src="./images/user_interface_sw_builds.jpg">
   </p>
@@ -112,6 +113,7 @@ This should reflect the Overall Process for the Over the Air Update.
 -->
 
 ## Main Control Software Builds
+- Hardware in Loop Testing
 <p align="center">
   <img width="800" src="./images/main_control_sw_builds.jpg">
   </p>
@@ -121,6 +123,7 @@ This should reflect the Overall Process for the Over the Air Update.
 -->
 
 ## Auxiliary Boards Software Builds
+- Hardware in Loop Testing
 <p align="center">
   <img width="800" src="./images/auxiliary_boards_sw_builds.jpg">
   </p>
@@ -130,6 +133,7 @@ This should reflect the Overall Process for the Over the Air Update.
 -->
 
 ## Connectivity Boards Software Builds
+- Hardware in Loop Testing
 <p align="center">
   <img width="800" src="./images/auxiliary_boards_sw_builds.jpg">
   </p>
@@ -138,7 +142,8 @@ This should reflect the Overall Process for the Over the Air Update.
 
 -->
 
-## Bundle Script
+## Full System Testing
+- Full System Verification Testing
 <p align="center">
   <img width="1000" src="./images/ota_bundle_delivery.jpg">
   </p>
