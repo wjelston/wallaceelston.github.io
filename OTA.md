@@ -13,7 +13,7 @@ Over The Air Update
 1. [Main Control Software Builds](#main-control-software-builds)
 1. [Auxiliary Boards Software Builds](#auxiliary-boards-software-builds)
 1. [Connectivity Board Software Builds](#connectivity-boards-software-builds)
-1. [Bundle Script](#bundle-script)
+1. [Full System Testing](#full-system-testing)
 1. [json Bundle Script](#json-bundle-script)
 
 
