@@ -181,6 +181,9 @@ This should reflect the Overall Process for the Over the Air Update.
 -->
 
 ## Cloud Delivery Method
+
+This is defined by the connectivity cloud team of Principal Architect, Connectivity and Lead System Architect, Connectivity and reflects when the physical assets of software and configuration are delivered to the connectivity team how they deliver to the server for OTA deployment.
+
 <p align="center">
   <img width="500" src="./images/cloud_deployment_mechanism.jpg">
   </p>
