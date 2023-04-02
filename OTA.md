@@ -50,16 +50,13 @@ At each stage of development, verification and validation this will require subs
 
 ## Stakeholder Requirements
 
-1. Remotely pushed software packages that increase the security, performance or capabilities of a single appliance or an ecosystem of appliances
-1. I want my appliances to stay secure & ​
-up-to-date with the latest features, so I can enjoy my product longer
-1. As a User I want to be able to update my product to the latest software and configurations updates.
-1. As a User I want to be able to enable future capabilities my product may initiatilly not support, by software and configuration updates.
-1. As a User I want to be able to add and remove apps from my product to tailor my product to my specific usage and needs.
-1. As a User I should be able to choose when and which updates i want to apply to my product.  
-1. As a User I should be able to apply full or partial updates.
+1. As a User I want to be able to remotely push software updates that increase the security, performance and/or capabilities of a single appliance or an ecosystem of appliances.
+1. As a User I want to be able to stay secure & ​up-to-date with the latest features, so I can enjoy my product longer with new features throughout the life of the product.
+1. As a User I want to be able to add and remove apps from my product to tailor my product to my specific usage patterns and needs, as my life changes.
+1. As a User I should be able to choose when and which updates I want to apply to my product, based on my current lifestyle.
+1. As a User I should be able to apply full or partial updates at my convenience.
 1. As a User I should have a recovery mechanism such as Factory Defaults to return my product to a usable condition should an outage occur such as power, internet service provider, or WiFi Network.
-1. As a User I expect the full software update process from start to end to take no more than 10 minutes, as these are my expectation from other devices I currently use.
+1. As a User I expect the full software update process from start (Time of Initiation) to end (Product is ready to use post software update) to take no more than 10 minutes, as these are my expectation from other devices I currently use.
 
 
 ## Kattegatt PoC
