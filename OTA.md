@@ -17,6 +17,11 @@ Over The Air Update
 1. [json Bundle Script](#json-bundle-script)
 
 
+Notes:
+- Design and Consumer Experience Requirements from Figma, Supernova, Flutter, React, SHAPE for Over the Air Update
+- Write up Synopsis
+- Share with Saili
+- Share with OTA Review this week.
 
 
 ## Document Synopsis
