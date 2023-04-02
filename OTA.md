@@ -77,7 +77,7 @@ These are the links to the Design Teams Graphical Assets and Experiences as it p
 - [Framer Link - Pending]()
 
 ## Software Team Delivery Process and Tool Chain
-This is the process as defined by the `SQA (Software Quality Assurance)` Process Owner.  This presentation shows the process of micro services from contributors are pushed to the Continuous Development and Continuous Integration Services.  In addtiion it shows how code is checked in and to what service or tool, the build process, the test process, and then release of software services to be tested in Subsystems with Configurations.
+This is the process as defined by the `SQA (Software Quality Assurance)` Process Owner.  This [presentation](https://electrolux-my.sharepoint.com/:p:/r/personal/francesco_giorgetti_electrolux_com/Documents/File%20di%20chat%20di%20Microsoft%20Teams/PoC_CICD_24Mar23.pptx?d=wfb85134533c94cc5b1b299dd8b17e390&csf=1&web=1&e=SdDVeq) shows the process of micro services from contributors are pushed to the Continuous Development and Continuous Integration Services.  In addtiion it shows how code is checked in and to what service or tool, the build process, the test process, and then release of software services to be tested in Subsystems with Configurations.
 <!-- Notes
 
 -->
