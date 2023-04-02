@@ -197,7 +197,7 @@ This is defined by the connectivity cloud team of Principal Architect, Connectiv
 ## Electrical System Update
 
 <p align="center">
-  <img width="500" src="./images/electrical_system_update_sequence.jpg">
+  <img width="1000" src="./images/electrical_system_update_sequence.jpg">
   </p>
 
 <!-- Notes
