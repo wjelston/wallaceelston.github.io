@@ -15,26 +15,44 @@ Over The Air Update
 1. [Connectivity Board Software Builds](#connectivity-boards-software-builds)
 1. [Full System Testing](#full-system-testing)
 1. [json Bundle Script](#json-bundle-script)
+1. [Dispatching Deployment](#dispatching-deployment)
 
 
+<!--
 Notes:
 - Design and Consumer Experience Requirements from Figma, Supernova, Flutter, React, SHAPE for Over the Air Update
 - Write up Synopsis
 - Share with Saili
 - Share with OTA Review this week.
+-->
 
 
 ## Document Synopsis
 
+This document includes the microservices release process from the software team, the subsystems process for HIL testing of each subsystem, systems testing for full system testing, and finally OTA Package delivery to the Connectivity Servers for deployment.  It also has links to the internal system deployment documentation within the system when the OTA bundle is delivered to the product in the field.
+
+
+This document will be the definition for the Process from **`Software`** check in of `micro services`, to the builds for development, test, release for verification and validation.  
+
+This document will also show how the `configurations, capabilities and software` are coupled together for `Subsystems` such as User Interface Asemblies, Main Control Assemblies and Auxiliary Control Assemblies, thus allowing Subsystems to be verified and validated.  
+
+In addition to Subsystems verification this document will define the `Systems` verification and validation for coupling all electronics with loads, sensors and switches for systems verification and validation to allow for `Full System Over the Air Updates`.  
+
+At each stage of development, verification and validation this will require subsystem and systems items to be delivered to a Production Release Process, upon completion of verification and validation.
+
+
 
 ## Terms and Definitions
-UBD - Unified Bundle Descriptor
-URL - Universal Resource Locator
-ANC is a Part Number for a specific component in TeamCenter
-PNC is the Overall Model Number for a specific BOM to be built and distributed to our consumer
+- **UBD** - Unified Bundle Descriptor
+- **URL** - Universal Resource Locator
+- **ANC** is a Part Number for a specific component in TeamCenter
+- **PNC** is the Overall Model Number for a specific BOM to be built and distributed to our consumer
 
 ## Stakeholder Requirements
 
+1. Remotely pushed software packages that increase the security, performance or capabilities of a single appliance or an ecosystem of appliances
+1. I want my appliances to stay secure & ​
+up-to-date with the latest features, so I can enjoy my product longer
 1. As a User I want to be able to update my product to the latest software and configurations updates.
 1. As a User I want to be able to enable future capabilities my product may initiatilly not support, by software and configuration updates.
 1. As a User I want to be able to add and remove apps from my product to tailor my product to my specific usage and needs.
@@ -52,6 +70,11 @@ PNC is the Overall Model Number for a specific BOM to be built and distributed t
 <!-- Notes
 
 -->
+
+## Design Team Consumer Experience and Interaction
+[Sharepoint Link](https://electrolux.sharepoint.com/:p:/r/sites/GlobalHMIUIStrategy/Shared%20Documents/Design/01%20Presentations/2022%20Sprint%20Reviews/Valhalla%20-%20Sprint%2017-18%20-%20LT%20OTA.pptx?d=w73e109c044eb45a48356c5eddb6070d2&csf=1&web=1&e=ogmhcq&nav=eyJzSWQiOjIxNDc0NzA4ODMsImNJZCI6MjgwNzM2NTczMn0)
+[Figma Link](https://www.figma.com/file/wZxnB2zvGxjbsCnSkdYx00/Design---OTA-updates?node-id=0-1&t=GSjXDAo0vJzmwF9I-0)
+[Framer Link - Pending]()
 
 ## Software Team Delivery Process and Tool Chain
 
@@ -232,3 +255,7 @@ This should reflect the Overall Process for the Over the Air Update.
 
 
 ```
+
+## Dispatching Deployment
+
+[Over the Air Connectivity @ OTA](https://sdlcwiki.electrolux.com/pages/viewpage.action?spaceKey=ASTUESWA&title=Over-The-Air+Connectivity+@+ota)
