@@ -14,6 +14,8 @@ Over The Air Update
 1. [Auxiliary Boards Software Builds](#auxiliary-boards-software-builds)
 1. [Connectivity Board Software Builds](#connectivity-boards-software-builds)
 1. [Full System Testing](#full-system-testing)
+1. [Cloud Delivery Method](#cloud-delivery-method)
+1. [Electrical System Update](#electrical-system-update)
 1. [json Bundle Script](#json-bundle-script)
 1. [Dispatching Deployment](#dispatching-deployment)
 
@@ -192,6 +194,15 @@ This is defined by the connectivity cloud team of Principal Architect, Connectiv
 
 -->
 
+## Electrical System Update
+
+<p align="center">
+  <img width="500" src="./images/electrical_system_update_sequence.jpg">
+  </p>
+
+<!-- Notes
+
+-->
 
 ## json Bundle Script
 ```json
