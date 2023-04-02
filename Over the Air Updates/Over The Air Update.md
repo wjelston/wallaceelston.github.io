@@ -61,7 +61,7 @@ At each stage of development, verification and validation this will require subs
 
 ## Kattegatt PoC
 <p align="center">
-  <img width="1200" src="./images/ucc_electrical_electronics_system_design.jpg">
+  <img width="1200" src="../images/ucc_electrical_electronics_system_design.jpg">
   </p>
 
 <!-- Notes
@@ -82,28 +82,28 @@ This is the process as defined by the `SQA (Software Quality Assurance)` Process
 
 -->
 <p align="center">
-  <img width="1200" src="./images/ci_cd_process/slide1.jpeg">
+  <img width="1200" src="../images/ci_cd_process/slide1.jpeg">
   </p>
 
 <p align="center">
-  <img width="1200" src="./images/ci_cd_process/slide2.jpeg">
+  <img width="1200" src="../images/ci_cd_process/slide2.jpeg">
   </p>
 
   <p align="center">
-  <img width="1200" src="./images/ci_cd_process/slide3.jpeg">
+  <img width="1200" src="../images/ci_cd_process/slide3.jpeg">
   </p>
 
   <p align="center">
-  <img width="1200" src="./images/ci_cd_process/slide4.jpeg">
+  <img width="1200" src="../images/ci_cd_process/slide4.jpeg">
   </p>
 
 
 <p align="center">
-  <img width="1200" src="./images/ci_cd_process/slide5.jpeg">
+  <img width="1200" src="../images/ci_cd_process/slide5.jpeg">
   </p>
 
 <p align="center">
-  <img width="1200" src="./images/ci_cd_process/slide6.jpeg">
+  <img width="1200" src="../images/ci_cd_process/slide6.jpeg">
   </p>
 
 
@@ -112,7 +112,7 @@ This is the process as defined by the `SQA (Software Quality Assurance)` Process
 ## Over the Air Overall Process
 This should reflect the Overall Process for the Over the Air Update.
 <p align="center">
-  <img width="1200" src="./images/over_the_air_overall_process.jpg">
+  <img width="1200" src="../images/over_the_air_overall_process.jpg">
   </p>
 
 <!-- Notes
@@ -122,7 +122,7 @@ This should reflect the Overall Process for the Over the Air Update.
 
 ## Software Team Tech Stack MicroServices Delivery
 <p align="center">
-  <img width="800" src="./images/tech_stack_delivery_teams.jpg">
+  <img width="800" src="../images/tech_stack_delivery_teams.jpg">
   </p>
 
 <!-- Notes
@@ -133,7 +133,7 @@ This should reflect the Overall Process for the Over the Air Update.
 ## User Interface Software Builds
 - Hardware in Loop Testing
 <p align="center">
-  <img width="800" src="./images/user_interface_sw_builds.jpg">
+  <img width="800" src="../images/user_interface_sw_builds.jpg">
   </p>
 
 <!-- Notes
@@ -143,7 +143,7 @@ This should reflect the Overall Process for the Over the Air Update.
 ## Main Control Software Builds
 - Hardware in Loop Testing
 <p align="center">
-  <img width="800" src="./images/main_control_sw_builds.jpg">
+  <img width="800" src="../images/main_control_sw_builds.jpg">
   </p>
 
 <!-- Notes
@@ -153,7 +153,7 @@ This should reflect the Overall Process for the Over the Air Update.
 ## Auxiliary Boards Software Builds
 - Hardware in Loop Testing
 <p align="center">
-  <img width="800" src="./images/auxiliary_boards_sw_builds.jpg">
+  <img width="800" src="../images/auxiliary_boards_sw_builds.jpg">
   </p>
 
 <!-- Notes
@@ -163,7 +163,7 @@ This should reflect the Overall Process for the Over the Air Update.
 ## Connectivity Boards Software Builds
 - Hardware in Loop Testing
 <p align="center">
-  <img width="800" src="./images/auxiliary_boards_sw_builds.jpg">
+  <img width="800" src="../images/auxiliary_boards_sw_builds.jpg">
   </p>
 
 <!-- Notes
@@ -173,7 +173,7 @@ This should reflect the Overall Process for the Over the Air Update.
 ## Full System Testing
 - Full System Verification Testing
 <p align="center">
-  <img width="1000" src="./images/ota_bundle_delivery.jpg">
+  <img width="1000" src="../images/ota_bundle_delivery.jpg">
   </p>
 
 <!-- Notes
@@ -185,7 +185,7 @@ This should reflect the Overall Process for the Over the Air Update.
 This is defined by the connectivity cloud team of Principal Architect, Connectivity and Lead System Architect, Connectivity and reflects when the physical assets of software and configuration are delivered to the connectivity team how they deliver to the server for OTA deployment.
 
 <p align="center">
-  <img width="500" src="./images/cloud_deployment_mechanism.jpg">
+  <img width="500" src="../images/cloud_deployment_mechanism.jpg">
   </p>
 
 <!-- Notes
@@ -195,7 +195,7 @@ This is defined by the connectivity cloud team of Principal Architect, Connectiv
 ## Electrical System Update
 Below are the links to the Confluence page pertaining to the Over the Air Process. [Over The Air Connectivity @ OTA](https://sdlcwiki.electrolux.com/display/ASTUESWA/Over-The-Air+Connectivity+@+ota) Confluence Page.
 <p align="center">
-  <img width="1000" src="./images/electrical_system_update_sequence.jpg">
+  <img width="1000" src="../images/electrical_system_update_sequence.jpg">
   </p>
 
 <!-- Notes
