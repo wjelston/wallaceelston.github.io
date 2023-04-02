@@ -49,9 +49,9 @@ Pushes locally from Visual Studio to Github, synchronizing documentation, and al
 
 # Confluence WebPage for Documentation
 
-Have to be online and have a network connection.
-Must Update while online and unable to work offline.
-Unable to merge when multiple people are working on same file.
+- Have to be online and have a network connection.
+- Must Update while online and unable to work offline.
+- Unable to merge when multiple people are working on same file.
 
 <p align="center">
   <img width="1200" src="./confluence_manual_entry.png">
