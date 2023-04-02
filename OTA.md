@@ -31,7 +31,7 @@ Notes:
 
 ## Document Synopsis
 
-This document includes the microservices release process from the software team, the subsystems process for HIL testing of each subsystem, systems testing for full system testing, and finally OTA Package delivery to the Connectivity Servers for deployment.  It also has links to the internal system deployment documentation within the system when the OTA bundle is delivered to the product in the field.
+This document includes the <span style="color:red;font-weight:700;font-size:14px">Software Microservices</span> release process from the software team, the <span style="color:Red;font-weight:700;font-size:14px"> Subsystems</span> <span style="color:Green;font-weight:700;font-size:14px"> for UI Assemblies, Main Control Assemblies, and Auxiliary Control Assemblies</span>  process for HIL testing of each subsystem, <span style="color:red;font-weight:700;font-size:14px">Full Electrical Systems</span>  testing, and finally OTA Package delivery to the <span style="color:red;font-weight:700;font-size:14px">Connectivity Servers</span> for deployment.  It also has links to the internal system deployment documentation within the system when the OTA bundle is delivered to the<span style="color:red;font-weight:700;font-size:14px">product in the field.</span>.
 
 
 This document will be the definition for the Process from **`Software`** check in of `micro services`, to the builds for development, test, release for verification and validation.  
@@ -195,7 +195,7 @@ This is defined by the connectivity cloud team of Principal Architect, Connectiv
 -->
 
 ## Electrical System Update
-
+Below are the links to the Confluence page pertaining to the Over the Air Process. [Over The Air Connectivity @ OTA](https://sdlcwiki.electrolux.com/display/ASTUESWA/Over-The-Air+Connectivity+@+ota) Confluence Page.
 <p align="center">
   <img width="1000" src="./images/electrical_system_update_sequence.jpg">
   </p>
