@@ -1,7 +1,21 @@
+# Current Process
+
+1. Document in Visual Studio Code Markdown and HTML Documentation.
+1. Using Github push changes from Visual Studio Code to Github using either a Command Prompt set of git commands  <p><img width="30" src="./command_prompt.png"></p> OR using Github Desktop <p><img width="30" src="./github_desktop_icon.png"></p> 
+1. Once Github Push, Pull, Fetch and Merge are completed all documentation is on the github website for review.
 
 
+# Problem Statement:
 
-# Visual Studio Code
+Current `Confluence Pages` require all documentation to be created, maintained, edited and released on Confluence and does not allow for multiple user to contribute and merge content.
+
+# Request
+
+Allow offline development of markdown and HTML documentation using Visual Studio and enable the ability to push changes to Confluence. 
+
+# Process
+
+## Visual Studio Code
 
 <p align="center">
   <img width="1200" src="./visual_studio_code.png">
@@ -11,7 +25,7 @@
 
 -->
 
-# Github Desktop or Command Prompt
+## Github Desktop or Command Prompt
 
 <p align="center">
   <img width="1200" src="./github_desktop.png">
@@ -29,7 +43,7 @@
 
 -->
 
-# Github WebPage for Documentation
+## Github WebPage for Documentation
 
 Pushes locally from Visual Studio to Github, synchronizing documentation, and allowing multiple collaborators to contribute and merge, like software development.
 
@@ -47,7 +61,7 @@ Pushes locally from Visual Studio to Github, synchronizing documentation, and al
 
 -->
 
-# Confluence WebPage for Documentation
+## Confluence WebPage for Documentation
 
 - Have to be online and have a network connection.
 - Must Update while online and unable to work offline.
