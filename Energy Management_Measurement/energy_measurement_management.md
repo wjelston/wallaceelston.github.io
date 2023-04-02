@@ -33,17 +33,30 @@ Monitor and report water, energy usage, and detergent (volume used, liquid versu
 `Only available through mobile app.` Give energy transparency, e.g.,  give the consumer transparency of how much the savings have been, and how you compare to other consumers "saved x kWh this year, xx% more than the average.
 
 # Solutions
+`Costs Development` include all associated capital investments including: tooling, resources, verification and validation, and launch to production.
 
 ## Gas Consumption Solutions
+|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
+|----|-----|-----|-----|-----|-----|-----|----|
+|1.|Flow|||||||
+|2.|Pressure|||||||
 
 ## Water Consumption Solutions
+|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
+|----|-----|-----|-----|-----|-----|-----|----|
+|1.|Flow|||||||
+|2.|Pressure|||||||
 
 ## Electrical Power Consumption Solutions
+|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
+|----|-----|-----|-----|-----|-----|-----|----|
+|1.|Auxiliary Board with Transducers|||||||
+|2.|Integrated Main Control Board Measurement|||||||
 
 ## Chemical Consumption
+|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
+|----|-----|-----|-----|-----|-----|-----|----|
+|1.|Flow|||||||
+|2.|Liquid Level|||||||
 
 # Overview:
-
-|Use Case|Solution|Cost BOM|Cost Development|
-|----|-----|-----|-----|
-
