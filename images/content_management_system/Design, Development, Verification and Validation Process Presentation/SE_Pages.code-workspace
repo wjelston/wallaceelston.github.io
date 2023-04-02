@@ -14,6 +14,9 @@
 		},
 		{
 			"path": "../../Content Management System"
+		},
+		{
+			"path": "../../../vscode-liquid-sample-master"
 		}
 	],
 	"settings": {
