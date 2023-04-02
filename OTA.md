@@ -3,7 +3,7 @@ Over The Air Update
 ## Table of Contents
 
 1. [Document Synopsis](#document-synopsis)
-1. [Terms and Definitions](#terms-and-definitions)
+1. [Glossary](#glossary)
 1. [Stakeholder Requirements](#stakeholder-requirements)
 1. [Kattegatt PoC](#kattegatt-poc)
 1. [Software Team Delivery Process and Tool Chain](#software-team-delivery-process-and-tool-chain)
@@ -42,11 +42,8 @@ At each stage of development, verification and validation this will require subs
 
 
 
-## Terms and Definitions
-- **UBD** - Unified Bundle Descriptor
-- **URL** - Universal Resource Locator
-- **ANC** is a Part Number for a specific component in TeamCenter
-- **PNC** is the Overall Model Number for a specific BOM to be built and distributed to our consumer
+## Glossary
+[Glossary](https://sdlcwiki.electrolux.com/pages/viewpage.action?spaceKey=ASTUESWA&title=Glossary+@+ota)
 
 ## Stakeholder Requirements
 
@@ -72,12 +69,15 @@ up-to-date with the latest features, so I can enjoy my product longer
 -->
 
 ## Design Team Consumer Experience and Interaction
+
+These are the links to the Design Teams Graphical Assets and Experiences as it pertains to the Over The Air Process on the Appliance Device and on the Mobile Device.
+
 [Sharepoint Link](https://electrolux.sharepoint.com/:p:/r/sites/GlobalHMIUIStrategy/Shared%20Documents/Design/01%20Presentations/2022%20Sprint%20Reviews/Valhalla%20-%20Sprint%2017-18%20-%20LT%20OTA.pptx?d=w73e109c044eb45a48356c5eddb6070d2&csf=1&web=1&e=ogmhcq&nav=eyJzSWQiOjIxNDc0NzA4ODMsImNJZCI6MjgwNzM2NTczMn0)
 [Figma Link](https://www.figma.com/file/wZxnB2zvGxjbsCnSkdYx00/Design---OTA-updates?node-id=0-1&t=GSjXDAo0vJzmwF9I-0)
 [Framer Link - Pending]()
 
 ## Software Team Delivery Process and Tool Chain
-
+This is the process as defined by the `SQA (Software Quality Assurance)` Process Owner.  This presentation shows the process of micro services from contributors are pushed to the Continuous Development and Continuous Integration Services.  In addtiion it shows how code is checked in and to what service or tool, the build process, the test process, and then release of software services to be tested in Subsystems with Configurations.
 <!-- Notes
 
 -->
@@ -262,3 +262,12 @@ This is defined by the connectivity cloud team of Principal Architect, Connectiv
 ## Dispatching Deployment
 
 [Over the Air Connectivity @ OTA](https://sdlcwiki.electrolux.com/pages/viewpage.action?spaceKey=ASTUESWA&title=Over-The-Air+Connectivity+@+ota)
+
+
+[Reprogramming Mechnanism](https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota)
+
+1. [Bootloader](https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota) - Used to reset, erase and program the specific software for a specific micro.
+1. [Programming Agent]() - Used to Dispatch specific software to the specific node to be reprogrammed.
+1. [Scribe](https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota) - Ask Lucio is this would be something like your experience using FIT Table for setting partition areas to program specific sectors or pages based on the FIT Table for doing partial updates?
+1. [Bridge](https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota) - Used to allow the Programming Agent to reach other nodes in the system beyond the direct connection the Programming Agent or Master Programmer may have acess to.
+1. [Open Points](https://sdlcwiki.electrolux.com/display/ASTUESWA/Open+points+@+ota)
