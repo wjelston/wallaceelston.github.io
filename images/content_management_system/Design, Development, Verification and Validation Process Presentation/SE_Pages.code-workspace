@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../Over the Air Updates"
+		},
+		{
+			"path": "../../../Over the Air Updates/Document Formats"
+		},
+		{
+			"path": "../../../Content Management System/Document Formats"
+		},
+		{
+			"path": "../../Content Management System"
+		}
+	],
+	"settings": {
+		"jira-plugin.workingProject": "",
+		"liquid.format.enable": true
+	}
+}
