@@ -17,6 +17,8 @@ Allow offline development of markdown and HTML documentation using Visual Studio
 
 ## Visual Studio Code
 
+Create, Edit, Maintain, and Release Documentation locally without needing a network connection allowing me to work anywhere on my PC.
+
 <p align="center">
   <img width="1200" src="./visual_studio_code.png">
   </p>
@@ -26,6 +28,8 @@ Allow offline development of markdown and HTML documentation using Visual Studio
 -->
 
 ## Github Desktop or Command Prompt
+
+Once I am ready I can then synchronize, merge, or fork my documentation changes while allowing me to work with others who are contributors to the same documentation.
 
 <p align="center">
   <img width="1200" src="./github_desktop.png">
