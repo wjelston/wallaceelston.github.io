@@ -72,9 +72,9 @@ At each stage of development, verification and validation this will require subs
 
 These are the links to the Design Teams Graphical Assets and Experiences as it pertains to the Over The Air Process on the Appliance Device and on the Mobile Device.
 
-- [Sharepoint Link](https://electrolux.sharepoint.com/:p:/r/sites/GlobalHMIUIStrategy/Shared%20Documents/Design/01%20Presentations/2022%20Sprint%20Reviews/Valhalla%20-%20Sprint%2017-18%20-%20LT%20OTA.pptx?d=w73e109c044eb45a48356c5eddb6070d2&csf=1&web=1&e=ogmhcq&nav=eyJzSWQiOjIxNDc0NzA4ODMsImNJZCI6MjgwNzM2NTczMn0)
-- [Figma Link](https://www.figma.com/file/wZxnB2zvGxjbsCnSkdYx00/Design---OTA-updates?node-id=0-1&t=GSjXDAo0vJzmwF9I-0)
-- [Framer Link - Pending]()
+- [OTA Sharepoint Link](https://electrolux.sharepoint.com/:p:/r/sites/GlobalHMIUIStrategy/Shared%20Documents/Design/01%20Presentations/2022%20Sprint%20Reviews/Valhalla%20-%20Sprint%2017-18%20-%20LT%20OTA.pptx?d=w73e109c044eb45a48356c5eddb6070d2&csf=1&web=1&e=ogmhcq&nav=eyJzSWQiOjIxNDc0NzA4ODMsImNJZCI6MjgwNzM2NTczMn0)
+- [OTA Figma Link](https://www.figma.com/file/wZxnB2zvGxjbsCnSkdYx00/Design---OTA-updates?node-id=0-1&t=GSjXDAo0vJzmwF9I-0)
+- [OTA Framer Link - Pending]()
 
 ## Software Team Delivery Process and Tool Chain
 This is the process as defined by the `SQA (Software Quality Assurance)` Process Owner.  This [presentation](https://electrolux-my.sharepoint.com/:p:/r/personal/francesco_giorgetti_electrolux_com/Documents/File%20di%20chat%20di%20Microsoft%20Teams/PoC_CICD_24Mar23.pptx?d=wfb85134533c94cc5b1b299dd8b17e390&csf=1&web=1&e=SdDVeq) shows the process of micro services from contributors are pushed to the Continuous Development and Continuous Integration Services.  In addtiion it shows how code is checked in and to what service or tool, the build process, the test process, and then release of software services to be tested in Subsystems with Configurations.
