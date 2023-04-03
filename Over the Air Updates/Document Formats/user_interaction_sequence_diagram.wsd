@@ -6,12 +6,8 @@
     Cloud -[#red]> Mobile_Application : Software Update Available
     Mobile_Application -[#red]> Mobile_Application : Notification of Release
     Mobile_Application -[#red]> Consumer : Notification of Release
-    Consumer -[#red]> Mobile_Application : Accepted
-    Mobile_Application -[#red]> Mobile_Application : Release Notes
-    Mobile_Application -[#red]> Consumer : Reviewed
-    Consumer -[#red]> Mobile_Application : Accepted  
-    Mobile_Application -[#red]> Mobile_Application : Accept Update
-    Mobile_Application -[#red]> Consumer : Reviewed
+    Mobile_Application -[#red]> Consumer : Show Release Notes
+    Mobile_Application -[#red]> Consumer : Present User Accepted Graphical Experience/Interaction.
     Consumer -[#red]> Mobile_Application : Accepted
     Mobile_Application -[#red]> Mobile_Application : Schedule Update
     Mobile_Application -[#red]> Consumer : Schedule
@@ -28,8 +24,29 @@
     after 5 minutes of no consumer activity the product will 
     return to idle/standby.
     end note
-    Product_Appliance -[#Green]> Product_Appliance : Idle/Standby
+    Product_Appliance -[#Green]> Product_Appliance : Idle/Standby State
     Product_Appliance -[#red]> Cloud: Electrical System State: Standby
     Cloud -[#blue]> Product_Appliance: Software Bundle Descriptor
-
+    Product_Appliance -[#Green]> Product_Appliance : Read_Bundle_Descriptor
+    Product_Appliance -[#Green]> Product_Appliance : Identify Number of Items to be updated and sequence.
+    Product_Appliance -[#Green]> Product_Appliance : Initiate_Reset
+    Product_Appliance -[#Green]> Cloud : Initiate_Download_SW_Packages
+    Cloud -[#Green]> Product_Appliance : Download_SW_Packages
+    Product_Appliance -[#Green]> Product_Appliance : Complete_Checks_of_Package_1
+    Product_Appliance -[#Green]> Product_Appliance : Write_Package_1
+    Product_Appliance -[#Green]> Product_Appliance : Read_Package_CRC_Package_1
+    Product_Appliance -[#Green]> Product_Appliance : Verify_Package_1 (Calculated CRC against Package CRC)
+    Product_Appliance -[#Green]> Product_Appliance : Notify User of Progress
+    Product_Appliance -[#Green]> Product_Appliance : Complete_Checks_of_Package_n
+    Product_Appliance -[#Green]> Product_Appliance : Write_Package_n
+    Product_Appliance -[#Green]> Product_Appliance : Read_Package_CRC_Package_n
+    Product_Appliance -[#Green]> Product_Appliance : Verify_Package_n (Calculated CRC against Package CRC)
+    Product_Appliance -[#Green]> Product_Appliance : Notify User of Progress
+    Product_Appliance -[#Green]> Product_Appliance : Completed_ALL_Updates
+    Product_Appliance -[#Green]> Product_Appliance : **Notify User of Completion**
+    Product_Appliance -[#Green]> Cloud : Completed_System_Update
+    Cloud -[#Green]> Product_Appliance: Reset
+    Product_Appliance -[#Green]> Product_Appliance : Reset
+    Product_Appliance -[#Green]> Product_Appliance : Idle/Standby State
+    Product_Appliance -[#Green]> Cloud : Check_For_Updates
 @enduml

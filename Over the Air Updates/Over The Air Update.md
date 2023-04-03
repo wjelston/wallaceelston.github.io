@@ -73,7 +73,12 @@ A `Full` update is a software update of the entire Operating System by updating 
 
 ## Design Team Consumer Experience and Interaction
 
+### Consumer Interaction Sequence Diagram
+
+![Consumer Interaction Sequence Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/user_interaction_sequence_diagram/user_interaction_sequence.png)
+
 These are the links to the Design Teams Graphical Assets and Experiences as it pertains to the Over The Air Process on the Appliance Device and on the Mobile Device.
+
 
 - [OTA Sharepoint Link](https://electrolux.sharepoint.com/:p:/r/sites/GlobalHMIUIStrategy/Shared%20Documents/Design/01%20Presentations/2022%20Sprint%20Reviews/Valhalla%20-%20Sprint%2017-18%20-%20LT%20OTA.pptx?d=w73e109c044eb45a48356c5eddb6070d2&csf=1&web=1&e=ogmhcq&nav=eyJzSWQiOjIxNDc0NzA4ODMsImNJZCI6MjgwNzM2NTczMn0)
 - [OTA Figma Link](https://www.figma.com/file/nRlexG1QvxoKLKHnpmi89T/Pattern---OTA-updates?node-id=0-1&t=yd63SKpWlQey2TDx-0)
@@ -308,8 +313,9 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 1. [Bridge](https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota) - Used to allow the Programming Agent to reach other nodes in the system beyond the direct connection the Programming Agent or Master Programmer may have acess to.
 1. [Open Points](https://sdlcwiki.electrolux.com/display/ASTUESWA/Open+points+@+ota)
 
-## UML Definition
 <!--
+## UML Definition
+
 ### Activity Diagram
 
 
@@ -317,6 +323,3 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 
 -->
 
-### Consumer Interaction Sequence Diagram
-
-![Consumer Interaction Sequence Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/user_interaction_sequence_diagram/user_interaction_sequence.png)
