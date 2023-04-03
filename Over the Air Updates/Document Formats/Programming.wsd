@@ -1,0 +1,76 @@
+@startuml programming
+
+
+    autonumber
+    actor Consumer
+    actor Micro_Programmer
+    actor SW_Developer
+
+    ==Discrete Release Software==
+
+    SW_Developer -[#blue]>  HMI_Software_Engineer: Compile Software
+    SW_Developer -[#blue]>  Main_Control_Software_Engineer: Compile Software
+    SW_Developer -[#blue]>  Configurations_Systems_Engineer: Compile Configurations
+    note right
+    **Software Release:** Used to Program through SWD.
+    Programming completed with IDE Programmer and PC.
+    Used by Supplier and Electrolux Factories to program 
+    boards individually (Discretely).
+    end note
+    HMI_Software_Engineer -[#blue]>  Discrete_Release_HMI: Release to TeamCenter
+    Main_Control_Software_Engineer -[#blue]>  Discrete_Release_Main_Control: Release to TeamCenter
+    Configurations_Systems_Engineer-[#blue]>  Discrete_Release_Systems_Configurations: Release to TeamCenter
+
+    ==Discrete Subsystem Software Update-SWD Interface==
+    HMI_Software_Engineer -[#blue]>  Discrete_Release_HMI: Release to TeamCenter
+    note left
+    **Software Release:** Subsystem definition is an HMI Assembly,
+    Main Control Assembly, Auxiliary Assembly as defined by Horizon.
+    end note
+    Main_Control_Assembly_Software_Engineer -[#blue]>  Discrete_Release_Main_Control: Release to TeamCenter
+    Configurations_Systems_Engineer-[#blue]>  Discrete_Release_Systems_Configurations: Release to TeamCenter
+
+    ==System Bundle Release Software==
+    Bundle_Descriptor_File -[#blue]> Bundle_System_Software
+    Bundle_System_Software -[#blue]>  Discrete_Release_HMI: Release from TeamCenter
+    Bundle_System_Software -[#blue]>  Discrete_Release_Main_Control: Release from TeamCenter
+    Bundle_System_Software -[#blue]>  Discrete_Release_Systems_Configurations: Release from TeamCenter
+    Bundle_Encrypt -[#blue]>  Systems_Software_Update: Release to TeamCenter
+
+    ==Electrical System Software Update Factory==
+    Release_Server -[#green]> OTA_Update_Server: Update Available for Model
+    OTA_Update_Server -[#blue]> Factory_Server: Software Update Available
+    Factory_Server -[#blue]> Factory_Worker: Software Update Available
+    Factory_Worker -[#blue]> Manufacturing_Line: Software Applications
+    Manufacturing_Line -[#blue]> Model_Number: Update Software
+    note left 
+    **Software Update:** Software Applications to be updated based on
+    Model Numbers being tested and programmed on the line with full system
+    updates.
+    end note
+    
+    alt Wired_System
+    End_Of_Line_Tester -[#green]> UUT_Connection_Wired: Communications Available Wired
+    UUT_Connection_Wired -[#green]> Program_System: Software Update System
+    end
+
+    alt Wireless_System
+    End_Of_Line_Tester -[#green]> UUT_Connection_Wireless: Communications Available Wireless
+    UUT_Connection_Wireless -[#green]> Program_System: Software Update System
+    end
+
+    ==Electrical System Software Update-Wireless Interface Consumer==
+    Release_Server -[#green]> OTA_Update_Server: Update Available for Model
+    OTA_Update_Server -[#blue]> Mobile_App: Software Update Available
+    Mobile_App -[#blue]> Mobile_App: **Consumer Message:** Update Available
+    Mobile_App -[#blue]> Consumer: Software Update Available
+    Consumer -[#blue]> Mobile_App: Accept Software Update
+    Mobile_App -[#blue]> OTA_Update_Server: Customer Accepted
+    note left 
+    **Software Update:** Software Update shall include all 
+    Applications Software, 
+    Category Software and Data Configurations, 
+    Low Level Drivers and Configuraitons, including 
+    Patches for Security and Privacy required.
+    end note 
+@enduml

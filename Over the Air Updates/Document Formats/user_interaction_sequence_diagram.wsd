@@ -1,0 +1,35 @@
+@startuml user_interaction_sequence
+
+    autonumber
+    actor Consumer
+    ==Software Bundle Update Released==
+    Cloud -[#red]> Mobile_Application : Software Update Available
+    Mobile_Application -[#red]> Mobile_Application : Notification of Release
+    Mobile_Application -[#red]> Consumer : Notification of Release
+    Consumer -[#red]> Mobile_Application : Accepted
+    Mobile_Application -[#red]> Mobile_Application : Release Notes
+    Mobile_Application -[#red]> Consumer : Reviewed
+    Consumer -[#red]> Mobile_Application : Accepted  
+    Mobile_Application -[#red]> Mobile_Application : Accept Update
+    Mobile_Application -[#red]> Consumer : Reviewed
+    Consumer -[#red]> Mobile_Application : Accepted
+    Mobile_Application -[#red]> Mobile_Application : Schedule Update
+    Mobile_Application -[#red]> Consumer : Schedule
+    Consumer -[#red]> Mobile_Application : Scheduled
+    Mobile_Application -[#red]> Cloud : Accepted/Scheduled
+
+    ==IDLE STATE==
+
+    Cloud -[#blue]> Product_Appliance: Software Update based on Scheduler
+    note left 
+    **Initial State:**
+    Electrical System is in IDLE/Standby State
+    This indicates if Electrical System was in Programming mode, 
+    after 5 minutes of no consumer activity the product will 
+    return to idle/standby.
+    end note
+    Product_Appliance -[#Green]> Product_Appliance : Idle/Standby
+    Product_Appliance -[#red]> Cloud: Electrical System State: Standby
+    Cloud -[#blue]> Product_Appliance: Software Bundle Descriptor
+
+@enduml
