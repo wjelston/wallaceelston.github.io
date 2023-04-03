@@ -280,3 +280,10 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 1. [Scribe](https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota) - Ask Lucio is this would be something like your experience using FIT Table for setting partition areas to program specific sectors or pages based on the FIT Table for doing partial updates?
 1. [Bridge](https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota) - Used to allow the Programming Agent to reach other nodes in the system beyond the direct connection the Programming Agent or Master Programmer may have acess to.
 1. [Open Points](https://sdlcwiki.electrolux.com/display/ASTUESWA/Open+points+@+ota)
+
+<!-- Notes
+
+Partial, Full Updates and App Mechanism
+Just for clarification of what I have in my mind.  As for the apps I agree just the app updates but when the IoS updates (equivalent to our Tech Stack) and how apple applies the update they can do that just like what Wes described on Anova.  They either do a full update OR they do a diff update looking at only the files that changed.  Wes said they do both and build for both to account for consumers who have been connected because the diff is faster and safer.  The full update is for recovery OR for consumers who haven't connected before and there are many updates from the current version they are on to the latest version released without having to do all the diff versions.
+
+-->
