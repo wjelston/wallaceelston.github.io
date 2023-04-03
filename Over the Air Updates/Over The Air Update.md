@@ -7,6 +7,7 @@ Over The Air Update
 1. [Stakeholder Requirements](#stakeholder-requirements)
 1. [Kattegatt PoC](#kattegatt-poc)
 1. [Types of Updates](#types-of-updates)
+1. [Design Team Consumer Experience and Interaction](#design-team-consumer-experience-and-interaction)
 1. [Software Team Delivery Process and Tool Chain](#software-team-delivery-process-and-tool-chain)
 1. [Software Team Tech Stack MicroServices Delivery](#software-team-tech-stack-microservices-delivery)
 1. [Over the Air Overall Process](#over-the-air-overall-process)
