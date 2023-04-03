@@ -25,19 +25,13 @@ Over The Air Update
 
 ## Document Synopsis
 
-This document includes the <span style="color:red;font-weight:700;font-size:14px">`Software Microservices`</span> release process from the software team, the <span style="color:Red;font-weight:700;font-size:14px"> `Subsystems`</span> <span style="color:Green;font-weight:700;font-size:14px"> for UI Assemblies, Main Control Assemblies, and Auxiliary Control Assemblies</span>  process for HIL testing of each subsystem, <span style="color:red;font-weight:700;font-size:14px">`Full Electrical Systems`</span>  testing, and finally OTA Package delivery to the <span style="color:red;font-weight:700;font-size:14px">`Connectivity Servers`</span> for deployment.  It also has links to the internal system deployment documentation within the system when the OTA bundle is delivered to the<span style="color:red;font-weight:700;font-size:14px;opacity: 1.0;">`product in the field`</span>.
-
-
-
-This document will be the definition for the Process from **`Software`** check in of `micro services`, to the builds for development, test, release for verification and validation.  
+This document includes the <span style="color:red;font-weight:700;font-size:14px">`Software Microservices`</span> release process from the software quality assurance team (SQA), the <span style="color:Red;font-weight:700;font-size:14px"> `Subsystems`</span> <span style="color:Green;font-weight:700;font-size:14px"> for UI Assemblies, Main Control Assemblies, and Auxiliary Control Assemblies</span>  process for HIL testing of each subsystem, <span style="color:red;font-weight:700;font-size:14px">`Full Electrical Systems`</span>  testing, and finally OTA Package delivery to the <span style="color:red;font-weight:700;font-size:14px">`Connectivity Servers`</span> for deployment.  It also has links to the internal system deployment documentation within the system when the OTA bundle is delivered to the <span style="color:red;font-weight:700;font-size:14px;opacity: 1.0;">`product in the field`</span>. 
 
 This document will also show how the `configurations, capabilities and software` are coupled together for `Subsystems` such as User Interface Asemblies, Main Control Assemblies and Auxiliary Control Assemblies, thus allowing Subsystems to be verified and validated.  
 
 In addition to Subsystems verification this document will define the `Systems` verification and validation for coupling all electronics with loads, sensors and switches for systems verification and validation to allow for `Full System Over the Air Updates`.  
 
 At each stage of development, verification and validation this will require subsystem and systems items to be delivered to a Production Release Process, upon completion of verification and validation.
-
-
 
 ## Glossary
 [Glossary](https://sdlcwiki.electrolux.com/pages/viewpage.action?spaceKey=ASTUESWA&title=Glossary+@+ota)
@@ -122,7 +116,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 <p align="center">
   <img width="1200" src="../Over%20the%20Air%20Updates/Document%20Formats/out/software_config_check_in/software_config_check_in.png">
   </p>
-  
+
 1. Software Engineering Checks In Software.
 1. Systems Engineering Checks In Configurations and Capabilties for the product configurations and capabilities that will work with the Software Stack.
 1. RTE will build the software and configurations and capabilities together and release to each subsystem for testing.
