@@ -315,7 +315,7 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 
 ### Consumer Interaction Sequence Diagram
 
-![Consumer Interaction Sequence Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/user_interaction_sequence_diagram/system_of_systems.png)
+![Consumer Interaction Sequence Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/user_interaction_sequence_diagram/user_interaction_sequence.png)
 
 ### Sequence Diagram
 
