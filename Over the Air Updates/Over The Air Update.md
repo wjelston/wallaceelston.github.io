@@ -88,7 +88,7 @@ A `Full` update is a software update of the entire Operating System by updating 
 These are the links to the Design Teams Graphical Assets and Experiences as it pertains to the Over The Air Process on the Appliance Device and on the Mobile Device.
 
 - [OTA Sharepoint Link](https://electrolux.sharepoint.com/:p:/r/sites/GlobalHMIUIStrategy/Shared%20Documents/Design/01%20Presentations/2022%20Sprint%20Reviews/Valhalla%20-%20Sprint%2017-18%20-%20LT%20OTA.pptx?d=w73e109c044eb45a48356c5eddb6070d2&csf=1&web=1&e=ogmhcq&nav=eyJzSWQiOjIxNDc0NzA4ODMsImNJZCI6MjgwNzM2NTczMn0)
-- [OTA Figma Link](https://www.figma.com/file/wZxnB2zvGxjbsCnSkdYx00/Design---OTA-updates?node-id=0-1&t=GSjXDAo0vJzmwF9I-0)
+- [OTA Figma Link](https://www.figma.com/file/nRlexG1QvxoKLKHnpmi89T/Pattern---OTA-updates?node-id=0-1&t=yd63SKpWlQey2TDx-0)
 - [OTA Framer Link - Pending]()
 
 ## Software Team Delivery Process and Tool Chain
