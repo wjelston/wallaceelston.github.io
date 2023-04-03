@@ -2,7 +2,7 @@
 
     autonumber
     actor Consumer
-    
+
     ==Software Bundle Update Released==
     Cloud -[#red]> Mobile_Application : Software Update Available
     Mobile_Application -[#red]> Mobile_Application : Notification of Release
@@ -50,4 +50,5 @@
     Product_Appliance -[#Green]> Product_Appliance : Reset
     Product_Appliance -[#Green]> Product_Appliance : Idle/Standby State
     Product_Appliance -[#Green]> Cloud : Check_For_Updates
+    
 @enduml
