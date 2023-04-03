@@ -117,7 +117,11 @@ This is the process as defined by the `SQA (Software Quality Assurance)` Process
 
 
 ## Over the Air Overall Process
+
 This should reflect the Overall Process for the Over the Air Update.  Starting from the top left corner of the image below.
+<p align="center">
+  <img width="1200" src="../Over%20the%20Air%20Updates/Document%20Formats/out/software_config_check_in/software_config_check_in.png">
+  </p>
 1. Software Engineering Checks In Software.
 1. Systems Engineering Checks In Configurations and Capabilties for the product configurations and capabilities that will work with the Software Stack.
 1. RTE will build the software and configurations and capabilities together and release to each subsystem for testing.
@@ -126,6 +130,8 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 1. Upon System Validations and test plans passed this software bundle will be released to a production version for Bill of Material Control.
 1. From the Producton version within the revision control system this software bundle will then be deployed to the server for release to Beta or all consumers.
 1. Once on the server the scheduler will schedule deliver to the consumers, coordinated with consumer acceptance, if required.
+
+
 
 <p align="center">
   <img width="1200" src="../images/over_the_air_overall_process.jpg">
@@ -308,15 +314,14 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 1. [Open Points](https://sdlcwiki.electrolux.com/display/ASTUESWA/Open+points+@+ota)
 
 ## UML Definition
-
+<!--
 ### Activity Diagram
 
+
 ![Activity Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/activity%20diagram/activity%20diagram.png)
+
+-->
 
 ### Consumer Interaction Sequence Diagram
 
 ![Consumer Interaction Sequence Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/user_interaction_sequence_diagram/user_interaction_sequence.png)
-
-### Sequence Diagram
-
-![Full Sequence Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/Programming/programming.png)

@@ -1,0 +1,52 @@
+@startuml software_config_check_in
+
+
+    autonumber
+    actor HMI_SW_Developer
+    actor MC_SW_Developer
+    actor Systems_Engineer
+    actor RTE
+
+    ==Software_Configuration_Test_Release_Process==
+
+    group Build and White Box Testing [White Box Testing Phase]
+        HMI_SW_Developer -[#blue]>  SW_Check_In_Development_Server: Compile/Check In SW for HMI
+        MC_SW_Developer -[#blue]>  SW_Check_In_Development_Server: Compile/Check In SW for Main Control
+        Systems_Engineer -[#blue]>  SW_Check_In_Development_Server: Compile/Check In Configurations
+        Systems_Engineer -[#blue]>  SW_Check_In_Development_Server: Compile/Check In Capabilities and Settings
+        SW_Check_In_Development_Server -[#blue]>  SW_Check_In_Test_Server: Promoted from Dev to Test
+        SW_Check_In_Test_Server -[#blue]>  SW_Check_In_Release_Server: Promoted from Test to Release
+    end
+
+    group Subsystem Testing Phase [Subsystem Testing Phase]
+        HMI_SW_Developer -[#blue]>  SW_Check_In: Compile/Check In SW for HMI
+        MC_SW_Developer -[#blue]>  SW_Check_In: Compile/Check In SW for Main Control
+        Systems_Engineer -[#blue]>  SW_Check_In: Compile/Check In Configurations
+        Systems_Engineer -[#blue]>  SW_Check_In: Compile/Check In Capabilities and Settings
+        SW_Check_In -[#blue]>  RTE: Release Train Engineer Verifies Software Build and Script
+        RTE -[#blue]>  Build_System: Script completes build for all software subsystems
+        Build_System -[#blue]> Systems_Engineer: Build System Notifies Systems Engineer for Programming
+    end
+    group System Testing Phase [Full Electrical System Testing Phase]
+        Systems_Engineer -[#blue]> Programming_Subsystems: Systems Engineer Programs all Subsystems.
+        Programming_Subsystems -[#blue]> Verification_Validation: Systems Engineer Programs all Subsystems in Lab.
+        Verification_Validation -[#blue]>  Verification_Validation: MVP or Passes Use Cases
+        Verification_Validation -[#blue]> Systems_Engineer: Systems Engineer Notified Verification and Validation Completed.
+        Systems_Engineer -[#blue]> RTE: Release Software, Configuration and Capabilities associated with Approval.
+    end
+    group Release to Production Phase [TeamCenter Release Phase]
+         RTE -[#blue]> TeamCenter: RTE Creates CR/CN for Release to Production.
+         RTE -[#red]>  TeamCenter: Released SW for HMI
+         RTE -[#red]>  TeamCenter: Released SW for Main Control
+         RTE -[#red]>  TeamCenter: Released Configurations for System
+         RTE -[#red]>  TeamCenter: Released Capabilities for System
+    end
+    note right
+    **SW Release:** Used to Program through SWD.
+    Programming completed with IDE Programmer and PC.
+    Used by Supplier and Electrolux Factories to program 
+    boards individually (Discretely).
+    end note
+
+    
+@enduml
