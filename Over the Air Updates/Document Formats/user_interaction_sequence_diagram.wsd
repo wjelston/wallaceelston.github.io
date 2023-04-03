@@ -2,6 +2,7 @@
 
     autonumber
     actor Consumer
+    
     ==Software Bundle Update Released==
     Cloud -[#red]> Mobile_Application : Software Update Available
     Mobile_Application -[#red]> Mobile_Application : Notification of Release
@@ -36,14 +37,14 @@
     Product_Appliance -[#Green]> Product_Appliance : Write_Package_1
     Product_Appliance -[#Green]> Product_Appliance : Read_Package_CRC_Package_1
     Product_Appliance -[#Green]> Product_Appliance : Verify_Package_1 (Calculated CRC against Package CRC)
-    Product_Appliance -[#Green]> Product_Appliance : Notify User of Progress
+    Product_Appliance -[#Green]> Consumer : Notify User of Progress
     Product_Appliance -[#Green]> Product_Appliance : Complete_Checks_of_Package_n
     Product_Appliance -[#Green]> Product_Appliance : Write_Package_n
     Product_Appliance -[#Green]> Product_Appliance : Read_Package_CRC_Package_n
     Product_Appliance -[#Green]> Product_Appliance : Verify_Package_n (Calculated CRC against Package CRC)
-    Product_Appliance -[#Green]> Product_Appliance : Notify User of Progress
+    Product_Appliance -[#Green]> Consumer : Notify User of Progress
     Product_Appliance -[#Green]> Product_Appliance : Completed_ALL_Updates
-    Product_Appliance -[#Green]> Product_Appliance : **Notify User of Completion**
+    Product_Appliance -[#Green]> Consumer : **Notify User of Completion**
     Product_Appliance -[#Green]> Cloud : Completed_System_Update
     Cloud -[#Green]> Product_Appliance: Reset
     Product_Appliance -[#Green]> Product_Appliance : Reset
