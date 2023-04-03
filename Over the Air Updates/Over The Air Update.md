@@ -6,6 +6,7 @@ Over The Air Update
 1. [Glossary](#glossary)
 1. [Stakeholder Requirements](#stakeholder-requirements)
 1. [Kattegatt PoC](#kattegatt-poc)
+1. [Types of Updates](#types-of-updates)
 1. [Software Team Delivery Process and Tool Chain](#software-team-delivery-process-and-tool-chain)
 1. [Software Team Tech Stack MicroServices Delivery](#software-team-tech-stack-microservices-delivery)
 1. [Over the Air Overall Process](#over-the-air-overall-process)
@@ -68,7 +69,7 @@ At each stage of development, verification and validation this will require subs
 
 -->
 
-### Types of Updates
+## Types of Updates
 1. Application 
 1. Partial
 1. Full 
@@ -79,6 +80,9 @@ A `Partial` update is a software update of the microservices tech stack that req
 
 A `Full` update is a software update of the entire Operating System by updating a secondary partition for `flip flopping` or erasing, formatting, and writing the new operating system update completely.  This will require more time; however, is needed for those customers who have not connected and updated their appliances regularly and require to just update from the initial update to the new update or for those who need to recover their products from it's original factory software to the latest version.
 
+```
+**NOTE:**  These software Updates can be either Operating System, Configurations, Capabilties, Applications, Embeded RTOS, or anything related to the Tech Stack, including Low Level Programming Languages to High Level Programming Languages and Configuration Parameters.
+```
 ## Design Team Consumer Experience and Interaction
 
 These are the links to the Design Teams Graphical Assets and Experiences as it pertains to the Over The Air Process on the Appliance Device and on the Mobile Device.
