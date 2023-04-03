@@ -122,6 +122,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 <p align="center">
   <img width="1200" src="../Over%20the%20Air%20Updates/Document%20Formats/out/software_config_check_in/software_config_check_in.png">
   </p>
+  
 1. Software Engineering Checks In Software.
 1. Systems Engineering Checks In Configurations and Capabilties for the product configurations and capabilities that will work with the Software Stack.
 1. RTE will build the software and configurations and capabilities together and release to each subsystem for testing.
