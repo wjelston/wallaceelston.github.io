@@ -54,7 +54,7 @@ At each stage of development, verification and validation this will require subs
 1. As a User I want to be able to stay secure & ​up-to-date with the latest features, so I can enjoy my product longer with new features throughout the life of the product.
 1. As a User I want to be able to add and remove apps from my product to tailor my product to my specific usage patterns and needs, as my life changes.
 1. As a User I should be able to choose when and which updates I want to apply to my product, based on my current lifestyle.
-1. As a User I should be able to apply full or partial updates at my convenience.
+1. As a User I should be able to apply full or partial updates at my convenience and manage the applications on my product tailoring to my specific interaction patterns and needs, allowing more flexiblity, easier use and simplifying my daily activities.
 1. As a User I should have a recovery mechanism such as Factory Defaults to return my product to a usable condition should an outage occur such as power, internet service provider, or WiFi Network.
 1. As a User I expect the full software update process from start (Time of Initiation) to end (Product is ready to use post software update) to take no more than 10 minutes, as these are my expectation from other devices I currently use.
 
@@ -67,6 +67,17 @@ At each stage of development, verification and validation this will require subs
 <!-- Notes
 
 -->
+
+### Types of Updates
+1. Application 
+1. Partial
+1. Full 
+
+An `Application` update is the application interface that the consumer will specifically interact with graphically and behaviorally.  This application is the same as the type of application you have on your mobile device when you download an application to interact with.  You can add or delete it; however, does not require you to also download the Operating System with each application download.
+
+A `Partial` update is a software update of the microservices tech stack that requires an update without updating the entire software operating system and is done by doing a differential analysis of the files on the product against the files being updatind and only updating the files in the Operating System that require updates.
+
+A `Full` update is a software update of the entire Operating System by updating a secondary partition for `flip flopping` or erasing, formatting, and writing the new operating system update completely.  This will require more time; however, is needed for those customers who have not connected and updated their appliances regularly and require to just update from the initial update to the new update or for those who need to recover their products from it's original factory software to the latest version.
 
 ## Design Team Consumer Experience and Interaction
 
@@ -105,8 +116,6 @@ This is the process as defined by the `SQA (Software Quality Assurance)` Process
 <p align="center">
   <img width="1200" src="../images/ci_cd_process/slide6.jpeg">
   </p>
-
-
 
 
 ## Over the Air Overall Process
@@ -283,7 +292,6 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 
 <!-- Notes
 
-Partial, Full Updates and App Mechanism
-Just for clarification of what I have in my mind.  As for the apps I agree just the app updates but when the IoS updates (equivalent to our Tech Stack) and how apple applies the update they can do that just like what Wes described on Anova.  They either do a full update OR they do a diff update looking at only the files that changed.  Wes said they do both and build for both to account for consumers who have been connected because the diff is faster and safer.  The full update is for recovery OR for consumers who haven't connected before and there are many updates from the current version they are on to the latest version released without having to do all the diff versions.
+
 
 -->
