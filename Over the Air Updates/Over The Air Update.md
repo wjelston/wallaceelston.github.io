@@ -18,17 +18,8 @@ Over The Air Update
 1. [Full System Testing](#full-system-testing)
 1. [Cloud Delivery Method](#cloud-delivery-method)
 1. [Electrical System Update](#electrical-system-update)
-1. [json Bundle Script](#json-bundle-script)
+1. [Example json Bundle Script](#example-json-bundle-script)
 1. [Dispatching Deployment](#dispatching-deployment)
-
-
-<!--
-Notes:
-- Design and Consumer Experience Requirements from Figma, Supernova, Flutter, React, SHAPE for Over the Air Update
-- Write up Synopsis
-- Share with Saili
-- Share with OTA Review this week.
--->
 
 
 ## Document Synopsis
@@ -125,7 +116,16 @@ This is the process as defined by the `SQA (Software Quality Assurance)` Process
 
 
 ## Over the Air Overall Process
-This should reflect the Overall Process for the Over the Air Update.
+This should reflect the Overall Process for the Over the Air Update.  Starting from the top left corner of the image below.
+1. Software Engineering Checks In Software.
+1. Systems Engineering Checks In Configurations and Capabilties for the product configurations and capabilities that will work with the Software Stack.
+1. RTE will build the software and configurations and capabilities together and release to each subsystem for testing.
+1. Upon all Subsystems and interfaces of those subsystems being tested and passed their respective test plans those files will be released to a production version for Bill of Material Control.
+1. Systems Engineers will build the System Bundle that will include all the subsystem items released (Software, Configurations, Capabilties and Software Bundle Script) and test the programming process for deploying System Updates.  This can be done wirelessly or wired to the system to validate the systems update capabilties.
+1. Upon System Validations and test plans passed this software bundle will be released to a production version for Bill of Material Control.
+1. From the Producton version within the revision control system this software bundle will then be deployed to the server for release to Beta or all consumers.
+1. Once on the server the scheduler will schedule deliver to the consumers, coordinated with consumer acceptance, if required.
+
 <p align="center">
   <img width="1200" src="../images/over_the_air_overall_process.jpg">
   </p>
@@ -136,6 +136,10 @@ This should reflect the Overall Process for the Over the Air Update.
 
 
 ## Software Team Tech Stack MicroServices Delivery
+- Software Check in per the process as defined by SQA.
+- Continuous Integration and Development servers build the software, identifying build issues and aligning to the scripts for software delivery.
+- Software to be built, tested, and promoted based on business needs for development, test, and release of the software packages.
+
 <p align="center">
   <img width="800" src="../images/tech_stack_delivery_teams.jpg">
   </p>
@@ -146,7 +150,8 @@ This should reflect the Overall Process for the Over the Air Update.
 
 
 ## User Interface Software Builds
-- Hardware in Loop Testing
+- This is a specific release for User Interface Assemblies to conduct Hardware in Loop Testing.
+
 <p align="center">
   <img width="800" src="../images/user_interface_sw_builds.jpg">
   </p>
@@ -156,7 +161,8 @@ This should reflect the Overall Process for the Over the Air Update.
 -->
 
 ## Main Control Software Builds
-- Hardware in Loop Testing
+- This is a specific release for Main Control Assemblies to conduct Hardware in Loop Testing.
+
 <p align="center">
   <img width="800" src="../images/main_control_sw_builds.jpg">
   </p>
@@ -166,7 +172,8 @@ This should reflect the Overall Process for the Over the Air Update.
 -->
 
 ## Auxiliary Boards Software Builds
-- Hardware in Loop Testing
+- This is a specific release for Auxiliary Control Assemblies to conduct Hardware in Loop Testing.
+
 <p align="center">
   <img width="800" src="../images/auxiliary_boards_sw_builds.jpg">
   </p>
@@ -176,7 +183,8 @@ This should reflect the Overall Process for the Over the Air Update.
 -->
 
 ## Connectivity Boards Software Builds
-- Hardware in Loop Testing
+- This is a specific release for Connectivity Control Assemblies to conduct Hardware in Loop Testing.
+
 <p align="center">
   <img width="800" src="../images/auxiliary_boards_sw_builds.jpg">
   </p>
@@ -186,7 +194,9 @@ This should reflect the Overall Process for the Over the Air Update.
 -->
 
 ## Full System Testing
-- Full System Verification Testing
+- Full System Verification Testing to validate software, configurations and capabilites are built and aligned to the performance functions of the Full System.  This includes `Loads` (Motors, Heaters, Pumps, etc.), `Sensors` (RTD, NTC, PTC, Hall Effect, Speed, etc.), and `Switches` (Door Lock, Door State, Centrifugal, etc.).
+- Full System Testing also includes verifying the Software OTA transfers, updates and deploys properly in a testing environment.
+
 <p align="center">
   <img width="1000" src="../images/ota_bundle_delivery.jpg">
   </p>
@@ -217,7 +227,7 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 
 -->
 
-## json Bundle Script
+## Example json Bundle Script
 ```json
 {"PNC": "",
 "Serial_Number":"",
