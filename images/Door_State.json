@@ -1,0 +1,16 @@
+@startjson
+{
+    "Door_State": {
+        "Door_Open": "0",
+        "Door_Closed": "1",
+        "Door_Debounce": "30mS",
+        "Door_Read": "3 times total 90mS"
+    },
+    "Door_Lock_State": {
+        "Door_Unlocked": "0",
+        "Door_Locked": "1",
+        "Door_Debounce": "30mS",
+        "Door_Read": "3 times total 90mS"
+    }
+}
+@endjson
