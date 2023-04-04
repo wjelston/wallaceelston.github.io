@@ -332,26 +332,36 @@ Comments:
 
 ![Activity Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/activity%20diagram/activity%20diagram.png)
 
-
-
-How are you packaging the bundle?
-
-What are you using as a mechanism to extract bundle when built with bundle? Script?
-
-How does the system extract the bundle when system receives bundle?
-
-How does each subsystem validate its compatible?
-
-Using DAAS as point to point for nodes on bus one at a time?
-
-Is there an order to the update?
-
-Are you verifying node#?
-
-Micro#?
-
-Programming Agent unpackaged using script. PA. Fetches full package to Wi-Fi node. Fetches each node via URL for specific software to be programmed within script. 
-
-
 -->
+Questions:
+
+1. Scribe and FIT Table the same for partitioning software blocks:
+      1. Bootloader Application
+      1. RTOS
+      1. Horizon
+      1. Application
+      1. Configuration
+      1. Capability
+
+1. How are you packaging the bundle?
+
+1. What are you using as a mechanism to extract bundle when built with bundle? Script?
+
+1. How does the system extract the bundle when system receives bundle?
+
+1. How does each subsystem validate its compatible?
+
+1. Using DAAS as point to point for nodes on bus one at a time?
+
+1. Is there an order to the update?
+
+What Characteristics of the Update are you verifying:
+
+1. Are you verifying node#?
+1. Micro Supplier? Micro Family? Micro Number?  All of the above.
+
+1. Programming Agent unpackaged using script. PA. Fetches full package to Wi-Fi node. Fetches each node via URL for specific software to be programmed within script. 
+
+
+
 
