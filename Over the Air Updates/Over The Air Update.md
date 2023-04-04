@@ -314,12 +314,35 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 1. [Open Points](https://sdlcwiki.electrolux.com/display/ASTUESWA/Open+points+@+ota)
 
 <!--
+Comments:
+
 ## UML Definition
 
 ### Activity Diagram
 
 
 ![Activity Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/activity%20diagram/activity%20diagram.png)
+
+
+
+How are you packaging the bundle?
+
+What are you using as a mechanism to extract bundle when built with bundle? Script?
+
+How does the system extract the bundle when system receives bundle?
+
+How does each subsystem validate its compatible?
+
+Using DAAS as point to point for nodes on bus one at a time?
+
+Is there an order to the update?
+
+Are you verifying node#?
+
+Micro#?
+
+Programming Agent unpackaged using script. PA. Fetches full package to Wi-Fi node. Fetches each node via URL for specific software to be programmed within script. 
+
 
 -->
 
