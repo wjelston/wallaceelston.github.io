@@ -21,6 +21,7 @@ Over The Air Update
 1. [Example json Bundle Script](#example-json-bundle-script)
 1. [Dispatching Deployment](#dispatching-deployment)
 1. [UML Definition](#uml-definition)
+1. [Questions / Open Items](#questions)
 
 
 ## Document Synopsis
@@ -322,18 +323,12 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 1. [Bridge](https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota) - Used to allow the Programming Agent to reach other nodes in the system beyond the direct connection the Programming Agent or Master Programmer may have acess to.
 1. [Open Points](https://sdlcwiki.electrolux.com/display/ASTUESWA/Open+points+@+ota)
 
-<!--
-Comments:
 
 ## UML Definition
 
-### Activity Diagram
 
 
-![Activity Diagram](../Over%20the%20Air%20Updates/Document%20Formats/out/activity%20diagram/activity%20diagram.png)
-
--->
-Questions:
+## Questions:
 
 1. Scribe and FIT Table the same for partitioning software blocks:
       1. Bootloader Application
