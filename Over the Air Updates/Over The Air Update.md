@@ -159,7 +159,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 ## User Interface Software Builds
 - This is a specific release for User Interface Assemblies to conduct Hardware in Loop Testing.
-- This is our current typical release process to production which will include a bootloader for each micro in the subsystem.
+- This is our current release process to production which will include a bootloader for each micro in the subsystem.
 
 <p align="center">
   <img width="800" src="../images/user_interface_sw_builds.jpg">
@@ -171,7 +171,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 ## Main Control Software Builds
 - This is a specific release for Main Control Assemblies to conduct Hardware in Loop Testing.
-- This is our current typical release process to production which will include a bootloader for each micro in the subsystem.
+- This is our current release process to production which will include a bootloader for each micro in the subsystem.
 
 
 <p align="center">
@@ -184,7 +184,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 ## Auxiliary Boards Software Builds
 - This is a specific release for Auxiliary Control Assemblies to conduct Hardware in Loop Testing.
-- This is our current typical release process to production which will include a bootloader for each micro in the subsystem.
+- This is our current release process to production which will include a bootloader for each micro in the subsystem.
 
 
 <p align="center">
@@ -224,6 +224,10 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 [Release to TeamCenter Process Video](https://electrolux-my.sharepoint.com/:v:/r/personal/wallace_elston_electrolux_com/Documents/Video/OTA%20Process%20and%20Releasing%20to%20TeamCenter.mov?csf=1&web=1&e=H53b16)
 
 Example of this file is below at [Example OSD json Bundle](#example-osdjson-bundle-script)
+
+## Releases
+
+Previously we only released software and configurattions to our suppliers to build our controls and program software, and our factories to update controls in our factories.  **Now it is important that those instances of software and configurations are deployed to our consumers who have already purchased appliances and have those appliances in their home.**
 
 ## Cloud Delivery Method
 
