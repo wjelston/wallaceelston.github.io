@@ -29,7 +29,7 @@ Defining this process within the Kattegatt Project will enable a consistent way 
 ### Notes: 4/4/2023:
 |Type|Description|Owner|Delivery Date|Status|Notes|
 |-----|-----|-----|-----|-----|-----|
-|Action|`Needs of the Group Cross Functionally` Mobile, On Device and Web|Remy Ferber|4/11/2023|Open|Include in Needs the slice for Web|
+|Action|`Needs of the Group Cross Functionally` Mobile, On Device and Web|Remy Ferber|4/11/2023|Open|Include in Needs the slice for Web, aligned with Max and Robin Ux Writers.|
 |Action|`Terminology Alignment` for Way of Working|Magdalena Gawlik|4/11/2023|Open||
 |Action|Common methodology to `Localization`|Magdalena Gawlik|4/11/2023|Open||
 |Action|Follow Up Meeting next week to include Norbert Kozsir and Francesco Giorgetti|Wallace Elston|4/11/2023|Open||
@@ -44,5 +44,15 @@ Defining this process within the Kattegatt Project will enable a consistent way 
 1. Graphical Assetts and interfacing to the code.
 1. Information Architecture and what this looks like from Design to the Software Team.
 1. Tokenization (SHAPE) and files imported into code `next steps`.
+1. Mapping exercise of the process from Remy to tools that all can align with.
+
+</details>
+
+
+## Terms and Definitions:
+<details>
+  <summary>Terms and Definitions</summary>
+
+- `Localization` - Consumable in a `local market` or `region` the graphical elements, text strings, translations to languages, measurements that are needed to allow the user experience to be tailored to a consumer.
 
 </details>
