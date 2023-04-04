@@ -135,7 +135,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 
 <p align="center">
-  <img width="1200" src="../images/over_the_air_overall_process.jpg">
+  <img width="1450" src="../images/over_the_air_overall_process.jpg">
   </p>
 
 <!-- Notes
