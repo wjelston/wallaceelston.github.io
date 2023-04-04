@@ -18,7 +18,7 @@ Over The Air Update
 1. [Full System Testing](#full-system-testing)
 1. [Cloud Delivery Method](#cloud-delivery-method)
 1. [Electrical System Update](#electrical-system-update)
-1. [Example json Bundle Script](#example-json-bundle-script)
+1. [Example OSD.json Bundle Script](#example-osdjson-bundle-script)
 1. [Dispatching Deployment](#dispatching-deployment)
 1. [UML Definition](#uml-definition)
 1. [Questions / Open Items](#questions)
@@ -242,7 +242,7 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
 
 -->
 
-## Example json Bundle Script
+## Example OSD.json Bundle Script
 ```json
 {"PNC": "",
 "Serial_Number":"",
