@@ -279,7 +279,9 @@ Right Now I see they are validating strategies and initiatives we already have i
 
 
 ### Mechanical Architecture
+
 #### Process for Mechanical Constraints
+
 <p align="center">
   <img width="1200" src="../images/mechanical/cooking/slide2_process_1.jpeg">
   </p>
@@ -290,32 +292,39 @@ Right Now I see they are validating strategies and initiatives we already have i
 #### Cooking
 
 **Clustering**
+
 <p align="center">
   <img width="1200" src="../images/mechanical/cooking/slide3_clustering_1.jpeg">
   </p>
 
 **Envelopes**
+
 <p align="center">
   <img width="1200" src="../images/mechanical/cooking/slide5_envelopes_1.jpeg">
   </p>
 
 **Assemblies**
+
 <p align="center">
   <img width="1200" src="../images/mechanical/cooking/slide7_assembly_1.jpeg">
   </p>
 
 #### Laundry Dish
+
 **Clustering**
+
 <p align="center">
   <img width="1200" src="../images/mechanical/laundry_dish/slide1_clustering_1.jpeg">
   </p>
 
 **Compound Shapes**
+
 <p align="center">
   <img width="1200" src="../images/mechanical/laundry_dish/slide2_shapes_1.jpeg">
   </p>
 
 **Envelopes**
+
 <p align="center">
   <img width="1200" src="../images/mechanical/laundry_dish/slide4_envelopes_1.jpeg">
   </p>
@@ -324,18 +333,21 @@ Right Now I see they are validating strategies and initiatives we already have i
 #### Refrigeration
 
 **Current**
+
 <p align="center">
   <img width="1200" src="../images/mechanical/refrigeration/slide3_current_1.jpeg">
   </p>
 
 
 **Clustering**
+
 <p align="center">
   <img width="1200" src="../images/mechanical/refrigeration/slide7_clustering_1.jpeg">
   </p>
 
 
 **Envelopes**
+
 <p align="center">
   <img width="1200" src="../images/mechanical/refrigeration/slide9_envelopes_1.jpeg">
   </p>
@@ -343,6 +355,7 @@ Right Now I see they are validating strategies and initiatives we already have i
 #### All Categories
 
 **Outcomes - All Categories**
+
 <p align="center">
   <img width="1200" src="../images/consumer_experience/slide17_mechanical_landscape_1.jpeg">
   </p>
