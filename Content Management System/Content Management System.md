@@ -39,8 +39,9 @@ Defining this process within the Kattegatt Project will enable a consistent way 
 
 ## Next Topics to Discuss:
 <details>
-  <summary>Topics for 4/11/2023</summary>
+  <summary>Topics for Next Review</summary>
 
+### Topics for 4/11/2023:
 1. Graphical Assetts and interfacing to the code.
 1. Information Architecture and what this looks like from Design to the Software Team.
 1. Tokenization (SHAPE) and files imported into code `next steps`.
