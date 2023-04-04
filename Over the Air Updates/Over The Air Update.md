@@ -159,6 +159,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 ## User Interface Software Builds
 - This is a specific release for User Interface Assemblies to conduct Hardware in Loop Testing.
+- This is our current typical release process to production which will include a bootloader for each micro in the subsystem.
 
 <p align="center">
   <img width="800" src="../images/user_interface_sw_builds.jpg">
@@ -170,6 +171,8 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 ## Main Control Software Builds
 - This is a specific release for Main Control Assemblies to conduct Hardware in Loop Testing.
+- This is our current typical release process to production which will include a bootloader for each micro in the subsystem.
+
 
 <p align="center">
   <img width="800" src="../images/main_control_sw_builds.jpg">
@@ -181,6 +184,8 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 ## Auxiliary Boards Software Builds
 - This is a specific release for Auxiliary Control Assemblies to conduct Hardware in Loop Testing.
+- This is our current typical release process to production which will include a bootloader for each micro in the subsystem.
+
 
 <p align="center">
   <img width="800" src="../images/auxiliary_boards_sw_builds.jpg">
@@ -192,6 +197,8 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 ## Connectivity Boards Software Builds
 - This is a specific release for Connectivity Control Assemblies to conduct Hardware in Loop Testing.
+- This is our current typical release process to production which will include a bootloader for each micro in the subsystem.
+
 
 <p align="center">
   <img width="800" src="../images/auxiliary_boards_sw_builds.jpg">
