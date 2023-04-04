@@ -246,6 +246,9 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
     "ANC_001":
         {
         "ANC_Node_Number":"",
+        "Micro_Supplier":"",
+        "Micro_Family":"",
+        "Micro_Number":"",
         "Previous_ANC":
             {
             "Previous_ANC_Part_Number":"",
@@ -263,6 +266,9 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
     "ANC_002":
         {
         "ANC_Node_Number":"",
+        "Micro_Supplier":"",
+        "Micro_Family":"",
+        "Micro_Number":"",
         "Previous_ANC":
             {
             "Previous_ANC_Part_Number":"",
@@ -280,6 +286,9 @@ Below are the links to the Confluence page pertaining to the Over the Air Proces
     "ANC_003":
         {
         "ANC_Node_Number":"",
+        "Micro_Supplier":"",
+        "Micro_Family":"",
+        "Micro_Number":"",
         "Previous_ANC":
             {
             "Previous_ANC_Part_Number":"",
