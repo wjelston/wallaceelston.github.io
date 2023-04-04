@@ -20,7 +20,7 @@ Content Management System
 
 
 <details>
-  <summary>Notes Section Previous Meetings</summary>
+  <summary>Notes and Actions Section Previous Meetings</summary>
   
 ### Notes: 4/4/2023:
 |Type|Description|Owner|Delivery Date|Status|Notes|
