@@ -283,7 +283,7 @@ Right Now I see they are validating strategies and initiatives we already have i
 #### Process for Mechanical Constraints
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/cooking/slide2_process_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Cooking/slide2_process_1.jpeg">
   </p>
 
 
