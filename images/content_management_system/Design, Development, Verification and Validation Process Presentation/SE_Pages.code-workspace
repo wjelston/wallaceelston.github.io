@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "../../../vscode-liquid-sample-master"
+		},
+		{
+			"path": "../../../Configurations and Capabilities/Images"
 		}
 	],
 	"settings": {
