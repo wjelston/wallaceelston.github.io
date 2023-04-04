@@ -32,11 +32,11 @@
 ## Product Categories and Product Platform
 Product Categories:
 <p align="center">
-  <img width="1200" src="../images/consumer_experience/slide8_design_complexity.jpeg">
+  <img width="1200" src="../images/consumer_experience/slide8_design_complexity_1.jpeg">
   </p>
 
 <p align="center">
-  <img width="1200" src="../images/product_portfolio.jpg">
+  <img width="1200" src="../images/product_portfolio_1.jpg">
   </p>
 
 <!-- Notes
