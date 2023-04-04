@@ -18,7 +18,7 @@ Content Management System
 
 -->
 
-**NOTES:**
+## **NOTES:**
 <details>
   <summary>Notes and Actions Section Previous Meetings</summary>
   
