@@ -294,19 +294,19 @@ Right Now I see they are validating strategies and initiatives we already have i
 **Clustering**
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/cooking/slide3_clustering_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Cooking/slide3_clustering_1.jpeg">
   </p>
 
 **Envelopes**
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/cooking/slide5_envelopes_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Cooking/slide5_envelopes_1.jpeg">
   </p>
 
 **Assemblies**
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/cooking/slide7_assembly_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Cooking/slide7_assembly_1.jpeg">
   </p>
 
 #### Laundry Dish
@@ -314,19 +314,19 @@ Right Now I see they are validating strategies and initiatives we already have i
 **Clustering**
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/laundry_dish/slide1_clustering_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Laundry_Dish/slide1_clustering_1.jpeg">
   </p>
 
 **Compound Shapes**
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/laundry_dish/slide2_shapes_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Laundry_Dish/slide2_shapes_1.jpeg">
   </p>
 
 **Envelopes**
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/laundry_dish/slide4_envelopes_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Laundry_Dish/slide4_envelopes_1.jpeg">
   </p>
 
 
@@ -335,21 +335,21 @@ Right Now I see they are validating strategies and initiatives we already have i
 **Current**
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/refrigeration/slide3_current_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Refrigeration/slide3_current_1.jpeg">
   </p>
 
 
 **Clustering**
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/refrigeration/slide7_clustering_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Refrigeration/slide7_clustering_1.jpeg">
   </p>
 
 
 **Envelopes**
 
 <p align="center">
-  <img width="1200" src="../images/mechanical/refrigeration/slide9_envelopes_1.jpeg">
+  <img width="1200" src="../images/Mechanical/Refrigeration/slide9_envelopes_1.jpeg">
   </p>
 
 #### All Categories
