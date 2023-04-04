@@ -97,7 +97,7 @@ Strategy to support all regions across all product categories.
 
 ## One Pager Initiatives
 <p align="center">
-  <img width="1200" src="../images/initiative_one_pager.jpg">
+  <img width="1200" src="../images/initiative_one_pager_1.jpg">
   </p>
 
 <!-- Notes
@@ -119,7 +119,7 @@ Control Panel for Built In Oven
 
 ### System Design
 <p align="center">
-  <img width="1200" src="../images/UCC_Electrical_Electronics_System_Design.jpg">
+  <img width="1200" src="../images/ucc_electrical_electronics_system_design_1.jpg">
   </p>
 
 <!-- Notes
@@ -243,37 +243,37 @@ Right Now I see they are validating strategies and initiatives we already have i
 
 #### Roadmap Vision
 <p align="center">
-  <img width="1200" src="../images/consumer_experience/slide40_initial_vision.jpeg">
+  <img width="1200" src="../images/consumer_experience/slide40_initial_vision_1.jpeg">
   </p>
 
 ### Consumer Experience
 #### Current Ux Debt Project by Project
 <p align="center">
-  <img width="1200" src="../images/consumer_experience/slide7_ux_debt.jpeg">
+  <img width="1200" src="../images/consumer_experience/slide7_ux_debt_1.jpeg">
   </p>
 
 #### Interaction Layers
 <p align="center">
-  <img width="1200" src="../images/consumer_experience/slide10_component_layers.jpeg">
+  <img width="1200" src="../images/consumer_experience/slide10_component_layers_1.jpeg">
   </p>
 
 #### Reusable Widgets
 <p align="center">
-  <img width="1200" src="../images/consumer_experience/slide18_reusable_widgets.jpeg">
+  <img width="1200" src="../images/consumer_experience/slide18_reusable_widgets_1.jpeg">
   </p>
 
 
 #### Modalities and Good/Better/Best
 
 <p align="center">
-  <img width="1200" src="../images/consumer_experience/slide25_good_better_best.jpeg">
+  <img width="1200" src="../images/consumer_experience/slide25_good_better_best_1.jpeg">
   </p>
 
 
 #### Cross Product Solutions
 
 <p align="center">
-  <img width="1200" src="../images/consumer_experience/slide14_cross_product.jpeg">
+  <img width="1200" src="../images/consumer_experience/slide14_cross_product_1.jpeg">
   </p>
 
 
@@ -281,7 +281,7 @@ Right Now I see they are validating strategies and initiatives we already have i
 ### Mechanical Architecture
 #### Process for Mechanical Constraints
 <p align="center">
-  <img width="1200" src="../images/mechanical/cooking/slide2_process.jpeg">
+  <img width="1200" src="../images/mechanical/cooking/slide2_process_1.jpeg">
   </p>
 
 
@@ -291,33 +291,33 @@ Right Now I see they are validating strategies and initiatives we already have i
 
 **Clustering**
 <p align="center">
-  <img width="1200" src="../images/mechanical/cooking/slide3_clustering.jpeg">
+  <img width="1200" src="../images/mechanical/cooking/slide3_clustering_1.jpeg">
   </p>
 
 **Envelopes**
 <p align="center">
-  <img width="1200" src="../images/mechanical/cooking/slide5_envelopes.jpeg">
+  <img width="1200" src="../images/mechanical/cooking/slide5_envelopes_1.jpeg">
   </p>
 
 **Assemblies**
 <p align="center">
-  <img width="1200" src="../images/mechanical/cooking/slide7_assembly.jpeg">
+  <img width="1200" src="../images/mechanical/cooking/slide7_assembly_1.jpeg">
   </p>
 
 #### Laundry Dish
 **Clustering**
 <p align="center">
-  <img width="1200" src="../images/mechanical/laundry_dish/slide1_clustering.jpeg">
+  <img width="1200" src="../images/mechanical/laundry_dish/slide1_clustering_1.jpeg">
   </p>
 
 **Compound Shapes**
 <p align="center">
-  <img width="1200" src="../images/mechanical/laundry_dish/slide2_Shapes.jpeg">
+  <img width="1200" src="../images/mechanical/laundry_dish/slide2_shapes_1.jpeg">
   </p>
 
 **Envelopes**
 <p align="center">
-  <img width="1200" src="../images/mechanical/laundry_dish/slide4_envelopes.jpeg">
+  <img width="1200" src="../images/mechanical/laundry_dish/slide4_envelopes_1.jpeg">
   </p>
 
 
@@ -325,26 +325,26 @@ Right Now I see they are validating strategies and initiatives we already have i
 
 **Current**
 <p align="center">
-  <img width="1200" src="../images/mechanical/refrigeration/slide3_current.jpeg">
+  <img width="1200" src="../images/mechanical/refrigeration/slide3_current_1.jpeg">
   </p>
 
 
 **Clustering**
 <p align="center">
-  <img width="1200" src="../images/mechanical/refrigeration/slide7_clustering.jpeg">
+  <img width="1200" src="../images/mechanical/refrigeration/slide7_clustering_1.jpeg">
   </p>
 
 
 **Envelopes**
 <p align="center">
-  <img width="1200" src="../images/mechanical/refrigeration/slide9_envelopes.jpeg">
+  <img width="1200" src="../images/mechanical/refrigeration/slide9_envelopes_1.jpeg">
   </p>
 
 #### All Categories
 
 **Outcomes - All Categories**
 <p align="center">
-  <img width="1200" src="../images/consumer_experience/slide17_mechanical_landscape.jpeg">
+  <img width="1200" src="../images/consumer_experience/slide17_mechanical_landscape_1.jpeg">
   </p>
 
 ### Electrical Architecture
