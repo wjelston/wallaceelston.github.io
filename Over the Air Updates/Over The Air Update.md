@@ -212,13 +212,18 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 - Full System Verification Testing to validate software, configurations and capabilites are built and aligned to the performance functions of the Full System.  This includes `Loads` (Motors, Heaters, Pumps, etc.), `Sensors` (RTD, NTC, PTC, Hall Effect, Speed, etc.), and `Switches` (Door Lock, Door State, Centrifugal, etc.).
 - Full System Testing also includes verifying the Software OTA transfers, updates and deploys properly in a testing environment.
 
+
 <p align="center">
-  <img width="1000" src="../images/ota_bundle_delivery.jpg">
+  <img width="1000" src="../images/full_system_with_OTA.jpg">
   </p>
 
 <!-- Notes
 
 -->
+
+[Release to TeamCenter Process Video](https://electrolux-my.sharepoint.com/:v:/r/personal/wallace_elston_electrolux_com/Documents/Video/OTA%20Process%20and%20Releasing%20to%20TeamCenter.mov?csf=1&web=1&e=H53b16)
+
+Example of this file is below at [Example OSD json Bundle](#example-osdjson-bundle-script)
 
 ## Cloud Delivery Method
 
