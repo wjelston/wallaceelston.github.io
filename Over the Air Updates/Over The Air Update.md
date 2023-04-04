@@ -201,7 +201,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 
 <p align="center">
-  <img width="800" src="../images/auxiliary_boards_sw_builds.jpg">
+  <img width="800" src="../images/connectivity_sw_builds.jpg">
   </p>
 
 <!-- Notes
