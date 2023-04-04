@@ -12,6 +12,7 @@
      1. [Product Description Kattegatt](#product-description)
      1. [Systems Design Kattegatt](#system-design)
      1. [Flexible Architecture](#flexible-architecture)
+     1. [EPU Modules](#epu-modules)
      1. [Use Case Cluster Electrical and Electronics System Design for PoC](#use-case-cluster-electrical-and-electronics-system-design-for-poc)
      1. [Tech Stack Delivery Product Teams](#tech-stack-delivery-product-teams)
      1. [Tech Stack Delivery Software Teams](#tech-stack-delivery-software-teams)
@@ -134,6 +135,9 @@ Control Panel for Built In Oven
 <!-- Notes
 
 -->
+
+### EPU Modules:
+
 |EPU|SOM|Description|Version|Display|RTOS/OS|
 |----|----|----|----|----|----|
 |EPU_001|IMx8 Mini|Valhalla UI Architecture 001|1.0|7.8" Display|Linux OS/Horizon RTOS|
