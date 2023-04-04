@@ -26,13 +26,13 @@
 
 ## Design Principles
 <p align="center">
-  <img width="1200" src="design principles/Slide2.jpeg">
+  <img width="1200" src="design principles/slide2.jpeg">
   </p>
 
 ## Product Categories and Product Platform
 Product Categories:
 <p align="center">
-  <img width="1200" src="../images/consumer_experience/Slide8_Design_Complexity.jpeg">
+  <img width="1200" src="../images/consumer_experience/slide8_design_complexity.jpeg">
   </p>
 
 <p align="center">
