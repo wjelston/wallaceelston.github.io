@@ -26,7 +26,7 @@
 
 ## Design Principles
 <p align="center">
-  <img width="1200" src="design principles/slide2.jpeg">
+  <img width="1200" src="design_principles/slide2.jpeg">
   </p>
 
 ## Product Categories and Product Platform
