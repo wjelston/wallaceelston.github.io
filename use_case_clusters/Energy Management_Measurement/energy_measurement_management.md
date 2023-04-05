@@ -36,29 +36,29 @@ Monitor and report water, energy usage, and detergent (volume used, liquid versu
 `Costs Development` include all associated capital investments including: tooling, resources, verification and validation, and launch to production.
 
 ## Gas Consumption Solutions
-|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
-|----|-----|-----|-----|-----|-----|-----|----|
+|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|Notes/Comments|
+|----|-----|-----|-----|-----|-----|-----|----|----|
 |1.|Relay On Time for Each Solenoid|Estimated based on standard flow rate|
 |2.|Flow|||||||
 |3.|Pressure|||||||
 
 ## Water Consumption Solutions
-|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
-|----|-----|-----|-----|-----|-----|-----|----|
+|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|Notes/Comments|
+|----|-----|-----|-----|-----|-----|-----|----|----|
 |1.|Relay On Time for Each Solenoid|Estimated based on standard flow rate|
 |2.|Flow|||||||
 |3.|Pressure|||||||
 
 ## Electrical Power Consumption Solutions
-|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
-|----|-----|-----|-----|-----|-----|-----|----|
+|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|Notes/Comments|
+|----|-----|-----|-----|-----|-----|-----|----|----|
 |1.|Auxiliary Board with Transducers|||||||
 |2.|Integrated Main Control Board Measurement|||||||
-|3.|Touch Cell on Main Control Board to measure Current Flow||||||
+|3.|Touch Cell on Main Control Board to measure Current Flow|||||||Only provides feedback that Current is flowing, assume standard voltage levels.|
 
 ## Chemical Consumption
-|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
-|----|-----|-----|-----|-----|-----|-----|----|
+|Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|Notes/Comments|
+|----|-----|-----|-----|-----|-----|-----|----|----|
 |1.|Relay On Time for Chemcial Pump|Estimated based on standard flow rate for Pump|
 |2.|Flow|||||||
 |3.|Liquid Level|||||||
