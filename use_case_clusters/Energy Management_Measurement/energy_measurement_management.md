@@ -38,25 +38,29 @@ Monitor and report water, energy usage, and detergent (volume used, liquid versu
 ## Gas Consumption Solutions
 |Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
 |----|-----|-----|-----|-----|-----|-----|----|
-|1.|Flow|||||||
-|2.|Pressure|||||||
+|1.|Relay On Time for Each Solenoid|Estimated based on standard flow rate|
+|2.|Flow|||||||
+|3.|Pressure|||||||
 
 ## Water Consumption Solutions
 |Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
 |----|-----|-----|-----|-----|-----|-----|----|
-|1.|Flow|||||||
-|2.|Pressure|||||||
+|1.|Relay On Time for Each Solenoid|Estimated based on standard flow rate|
+|2.|Flow|||||||
+|3.|Pressure|||||||
 
 ## Electrical Power Consumption Solutions
 |Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
 |----|-----|-----|-----|-----|-----|-----|----|
 |1.|Auxiliary Board with Transducers|||||||
 |2.|Integrated Main Control Board Measurement|||||||
+|3.|Touch Cell on Main Control Board to measure Current Flow||||||
 
 ## Chemical Consumption
 |Options|Solution|Resolution|Accuracy|Range|URL|Cost BOM|Costs Development|
 |----|-----|-----|-----|-----|-----|-----|----|
-|1.|Flow|||||||
-|2.|Liquid Level|||||||
+|1.|Relay On Time for Chemcial Pump|Estimated based on standard flow rate for Pump|
+|2.|Flow|||||||
+|3.|Liquid Level|||||||
 
 # Overview:
