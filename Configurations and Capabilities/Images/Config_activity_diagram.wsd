@@ -6,11 +6,11 @@ Activity Diagram
 
     start
         :Open Configuration Tool;
-        :Checkout;
-        :Check cookie;
-        while (if cookie?) is (is invalid)
-        :Show login form;
-        endwhile
+        :Checkout Settings_File;
+        :Modify Settings_File;
+        while (Modifying Settings_File) is (is Modifying)
+        :Change Parameters;
+        endwhile (Is Modified)
         fork
         :Mail invoice;
         fork again
