@@ -16,13 +16,39 @@ Configurations (IoT and Appliance)
 Configuration of Appliance
 Configuration of IoT
 
+1. **Main Appliance Configuration** needed for the Appliance including:
+    1. UI
+         1. Machine and Appliance Config
+              1. .json
+              1. .srec
+              1. .h
+         1.	Touch Config
+              1. .json
+              1. .srec
+              1. .h
+    1. GPU
+         1.	Machine and Appliance Config
+              1. .json
+              1. .srec
+              1. .h
+         1.	Textual Assets Config
+              1. .json
+              1. .srec
+              1. .h
+              1. Translations.json
+1. **Main Connectivity Configuration** needed for the Cloud Ecosystem including:
+     1. Capability.json (see example in Configurations for Appliance and IoT)
+     1. State.json (see example in Configurations for Appliance and IoT)
+
+
+
 # Examples of Appliance Config
 
 <details>
   <summary>Example of Appliance Config</summary>
 
 ## Appliance Configuration
-Example from Supex 4/8 S00007697_A.json
+Example from Supex 4/8 S00007697_A.json Machine_And_Performance_Config for the User Interface ONLY.
 Format should be in following formats:
 - .h
 - .srec
