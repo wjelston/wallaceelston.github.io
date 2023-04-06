@@ -3,7 +3,7 @@ Configurations (IoT and Appliance)
 # Activity Diagram
 
 <p align="center">
-  <img width="500" src="./Images/out/Config_activity_diagram/Config.png">
+  <img width="500" src="./Images/out/Config_activity_diagram/Configurations.png">
   </p>
 
 <!-- Notes
