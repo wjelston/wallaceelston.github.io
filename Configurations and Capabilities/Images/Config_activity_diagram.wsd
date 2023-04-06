@@ -6,13 +6,13 @@ Activity Diagram
 
     start
         :Open ATUM Configuration Tool;
-        :Checkout "Settings_File" for EcoSystem Updating;
-        :Modify "Settings_File";
+        :Checkout "Configuration_Files" for EcoSystem Updating;
+        :Modify "Configuration_Files";
         while (Modifying Settings_File) is (is Modifying)
         :Change Parameters;
         endwhile (Is Modified)
-        :CheckIn Settings_File;
-        :Export Settings_File;
+        :CheckIn Configuration_Files;
+        :Export Configuration_Files;
         fork
         :Product Configuration;
         fork again
