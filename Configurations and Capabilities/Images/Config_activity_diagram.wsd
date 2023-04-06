@@ -5,18 +5,21 @@ Activity Diagram
     scale 1
 
     start
-        :Open Configuration Tool;
-        :Checkout Settings_File;
-        :Modify Settings_File;
+        :Open ATUM Configuration Tool;
+        :Checkout "Settings_File" for EcoSystem Updating;
+        :Modify "Settings_File";
         while (Modifying Settings_File) is (is Modifying)
         :Change Parameters;
         endwhile (Is Modified)
+        :CheckIn Settings_File;
+        :Export Settings_File;
         fork
-        :Mail invoice;
+        :Product Configuration;
         fork again
-        :Load games;
+        :IoT Configuration;
         end fork
-        :Install and play;
+        :Install on Appliance Product Config;
+        :Install on Cloud IoT Config;
     stop
 
 @enduml

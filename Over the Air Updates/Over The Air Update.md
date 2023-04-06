@@ -86,7 +86,9 @@ These are the links to the Design Teams Graphical Assets and Experiences as it p
 - [OTA Framer Link - Pending]()
 
 ## Software Team Delivery Process and Tool Chain
-This is the process as defined by the `SQA (Software Quality Assurance)` Process Owner.  This [presentation](https://electrolux-my.sharepoint.com/:p:/r/personal/francesco_giorgetti_electrolux_com/Documents/File%20di%20chat%20di%20Microsoft%20Teams/PoC_CICD_24Mar23.pptx?d=wfb85134533c94cc5b1b299dd8b17e390&csf=1&web=1&e=SdDVeq) shows the process of micro services from contributors are pushed to the Continuous Development and Continuous Integration Services.  In addtiion it shows how code is checked in and to what service or tool, the build process, the test process, and then release of software services to be tested in Subsystems with Configurations.
+This is the process as defined by the `SQA (Software Quality Assurance)` Process Owner.  This [presentation](https://electrolux-my.sharepoint.com/:p:/r/personal/francesco_giorgetti_electrolux_com/Documents/File%20di%20chat%20di%20Microsoft%20Teams/PoC_CICD_24Mar23.pptx?d=wfb85134533c94cc5b1b299dd8b17e390&csf=1&web=1&e=SdDVeq) shows the process of micro services from contributors are pushed to the Continuous Development and Continuous Integration Servers.
+
+In addtiion it shows how code is checked in and to what service or tool, the build process, the test process, and then release of software services to be tested in Subsystems with Configurations.
 <!-- Notes
 
 -->
@@ -123,9 +125,11 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
   <img width="1200" src="../Over%20the%20Air%20Updates/Document%20Formats/out/software_config_check_in/software_config_check_in.png">
   </p>
 
-1. Software Engineering Checks In Software.
+1. Software Engineering Checks In Software libraries and functional changes with instrumented code to test the libary software modules.
 1. Systems Engineering Checks In Configurations and Capabilties for the product configurations and capabilities that will work with the Software Stack.
+1. SQA (Software Quality Assurance) will perform testing of the software modules ensuring the software complies to the company standards, the functional libaries operate as intended, and provide feedback on any issues pertaining to these software modules.
 1. RTE will build the software and configurations and capabilities together and release to each subsystem for testing.
+1. Subsystem testing of all modules will be completed to ensure the User Interface, Main Control, Auxiliary Boards and Connectivity Subsystems pass there Hardware In Loop Testing for an approved Subystem Test Plan.
 1. Upon all Subsystems and interfaces of those subsystems being tested and passed their respective test plans those files will be released to a production version for Bill of Material Control.
 1. Systems Engineers will build the System Bundle that will include all the subsystem items released (Software, Configurations, Capabilties and Software Bundle Script) and test the programming process for deploying System Updates.  This can be done wirelessly or wired to the system to validate the systems update capabilties.
 1. Upon System Validations and test plans passed this software bundle will be released to a production version for Bill of Material Control.
@@ -147,6 +151,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 - Software Check in per the process as defined by SQA.
 - Continuous Integration and Development servers build the software, identifying build issues and aligning to the scripts for software delivery.
 - Software to be built, tested, and promoted based on business needs for development, test, and release of the software packages.
+- Release of these modules and libraries will be under revision control in Software Repositories, such as Bitbucket or Github, and Build Repositories, such as Jenkins.
 
 <p align="center">
   <img width="800" src="../images/tech_stack_delivery_teams.jpg">
