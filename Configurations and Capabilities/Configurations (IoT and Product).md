@@ -36,7 +36,7 @@ Configuration of IoT
               1. .srec
               1. .h
               1. Translations.json
-1. **Main Connectivity Configuration** needed for the Cloud Ecosystem including:
+1. **Main Connectivity Configuration** ONLY built what is needed for the Cloud Ecosystem including:
      1. Capability.json (see example in Configurations for Appliance and IoT)
      1. State.json (see example in Configurations for Appliance and IoT)
 
