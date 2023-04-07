@@ -51,7 +51,7 @@ Configuration of IoT
      1. State.json (see example in Configurations for Appliance and IoT)
 
 
-
+<!--
 # Examples of Appliance Config
 
 <details>
