@@ -2,8 +2,8 @@
 
 
     autonumber
-    actor Configuration_Engineer
     actor Configuration_Architect
+    actor Configuration_Engineer
 
     ==Configuration Data Structure==
 
@@ -18,6 +18,7 @@
     Hoods, Microwaves).  This includes Product and Connectivity
     Configuration Parameters.
     end note
+
     Config_Tool -[#red]> Product_Config : Update Data Structure
     Config_Tool -[#red]> Connectivity_Config : Update Data Structure
     Config_Tool -[#red]> Product_Config: Export Product Config UI
@@ -25,6 +26,7 @@
     Config_Tool -[#red]> Product_Config: Export Product Config Touch
     Config_Tool -[#red]> Product_Config: Export Product Config Graphical Assets
     Config_Tool -[#red]> Product_Config: Export Product Config Main Control
+    Config_Tool -[#red]> Product_Config: Export Product Config Auxliary Control
     Config_Tool -[#red]> Connectivity_Config: Export Connectivity Config Capabilities
     Config_Tool -[#red]> Connectivity_Config: Export Connectivity Config States
     Configuration_Architect -[#Green]> Config_Tool: Verify Data Structure for all exports
@@ -37,21 +39,41 @@
 
     ==Configuration Editing==
 
-    Configuration_Engineer -[#red]> Config_Tool : Software Update Available
+    Configuration_Engineer -[#red]> Config_Tool : Open Tool on PC
+    note left
+    **Role and Accountability**
+    Edit the unique PNC Appliance Configuration Data Structure, adding the specific
+    parametric data for the Product and Connectivity for a specific instance
+    of a PNC Appliance Release.
+    end note
+    Configuration_Engineer -[#red]> Config_Tool : Edit Category Specific Configuration File
+    Configuration_Engineer -[#red]> Config_Tool : Enter all data for Product
+    Configuration_Engineer -[#red]> Config_Tool : Enter all data for Connectivity
 
     ==Configurations Release==
 
-    Configuration_Engineer -[#red]> Product_Config : Software Update Available
+    Configuration_Engineer -[#red]> Config_Tool : Start Export Process Once All Data Is Entered
+    Config_Tool -[#Green]> Product_Config: Export Configuration Files
+    Product_Config -[#red]> Product_Config: Export Product Config UI
+    Product_Config -[#red]> Product_Config: Export Product Config GPU
+    Product_Config -[#red]> Product_Config: Export Product Config Touch
+    Product_Config -[#red]> Product_Config: Export Product Config Graphical Assets
+    Product_Config -[#red]> Product_Config: Export Product Config Main Control
+    Product_Config -[#red]> Product_Config: Export Product Config Auxiliary Control
+    Product_Config -[#green]> Config_Tool: Export Product Configurations and Formats for Product
+    Connectivity_Config -[#red]> Connectivity_Config: Export Connectivity Config Capabilities
+    Connectivity_Config -[#red]> Connectivity_Config: Export Connectivity Config States
+    Connectivity_Config -[#green]> Config_Tool: Export Connectivity Configurations and Formats for Connectivity
+    Config_Tool -[#red]> Config_Tool: Bundle all files into File System
+    Config_Tool -[#Green]> Configuration_Engineer: Folder from Configuration Tool Export "Ready"
+    Configuration_Engineer -[#Green]> Release_Management_System: Release Main Folder and all Files into Production Release Process ECN/ECR
     
     ==Configuration Deployment==
 
    Configuration_Engineer -[#blue]> Product_Config: Software Update based on Scheduler
     note left 
-    **Initial State:**
-    Electrical System is in IDLE/Standby State
-    This indicates if Electrical System was in Programming mode, 
-    after 5 minutes of no consumer activity the product will 
-    return to idle/standby.
+    **Roles and Accountability:**
+
     end note
     
 @enduml

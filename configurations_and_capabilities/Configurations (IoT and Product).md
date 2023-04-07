@@ -4,16 +4,12 @@ Configurations (IoT and Appliance)
 # Sequence Diagram
 
 <p align="center">
-  <img width="500" src="./document_formats/Configuration_Process.png">
+  <img width="1000" src="./document_formats/Configuration_Process.png">
   </p>
 
 <!-- Notes
 
 -->
-
-<p align="center">
-  <img width="500" src="../out/wallaceelston.github.io/configurations_and_capabilities/document_formats/config_process/Configuration_Process.png">
-  </p>
 
 # Activity Diagram
 
@@ -24,9 +20,6 @@ Configurations (IoT and Appliance)
 <!-- Notes
 
 -->
-
-
-
 
 # Export from Tool
 
@@ -57,7 +50,7 @@ Configuration of IoT
      1. Capability.json (see example in Configurations for Appliance and IoT)
      1. State.json (see example in Configurations for Appliance and IoT)
 
-<!--
+
 
 # Examples of Appliance Config
 
@@ -35513,4 +35506,3 @@ Format should be in following formats:
 ```
 </details>
 
--->
