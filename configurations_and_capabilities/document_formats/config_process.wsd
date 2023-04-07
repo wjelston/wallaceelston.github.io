@@ -81,8 +81,8 @@
 
     Product_Control_System -[#Green]> Product_Control_System: Startup
     Product_Control_System -[#Green]> Product_Config: Check Version
-    Product_Control_System -[#Green]> Cloud_Services: Connected
-    Cloud_Services -[#Green]> Connectivity_Config: Check Version 
+    Product_Control_System -[#Green]> Cloud_Services_System: Connected
+    Cloud_Services_System -[#Green]> Connectivity_Config: Check Version 
     Product_Config -[#Green]> Connectivity_Config: Verify Versions Compatible
 
 

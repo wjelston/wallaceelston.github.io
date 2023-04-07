@@ -1,5 +1,6 @@
 Configurations (IoT and Appliance)
 
+This document describes the Configuation Tool needed to align the Product and Connectivity Configurations, and also show the parametric data to be shared between the Cloud Services System and the Product Control System.
 
 # Sequence Diagram
 
