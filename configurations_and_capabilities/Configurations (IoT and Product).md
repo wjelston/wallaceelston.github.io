@@ -5,7 +5,7 @@ This document describes the Configuation Tool needed to align the Product and Co
 # Sequence Diagram
 
 <p align="center">
-  <img width="1000" src="./images/out/config_activity_diagram/configuration_process.png">
+  <img width="1000" src="./images/out/config_activity_diagram/configuration_process_1.png">
   </p>
 
 <!-- Notes
