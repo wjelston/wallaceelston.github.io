@@ -50,7 +50,7 @@
     Configuration_Engineer -[#red]> Config_Tool : Enter all data for Product
     Configuration_Engineer -[#red]> Config_Tool : Enter all data for Connectivity
 
-    ==Configurations Release==
+    ==Configurations Export==
 
     Configuration_Engineer -[#red]> Config_Tool : Start Export Process Once All Data Is Entered
     Config_Tool -[#Green]> Product_Config: Export Configuration Files
@@ -66,14 +66,30 @@
     Connectivity_Config -[#green]> Config_Tool: Export Connectivity Configurations and Formats for Connectivity
     Config_Tool -[#red]> Config_Tool: Bundle all files into File System
     Config_Tool -[#Green]> Configuration_Engineer: Folder from Configuration Tool Export "Ready"
+    
+    ==Configurations Release==
+    
     Configuration_Engineer -[#Green]> Release_Management_System: Release Main Folder and all Files into Production Release Process ECN/ECR
     
     ==Configuration Deployment==
 
-   Configuration_Engineer -[#blue]> Product_Config: Software Update based on Scheduler
-    note left 
-    **Roles and Accountability:**
+    Release_Management_System -[#red]> Configuration_Engineer
+    Configuration_Engineer -[#blue]> Product_Config: Programmed into Control System
+    Configuration_Engineer -[#blue]> Connectivity_Config: Loaded onto Server
 
+    ==Configuration Startup and Confirmation==
+
+    Product_Control_System -[#Green]> Product_Control_System: Startup
+    Product_Control_System -[#Green]> Product_Config: Check Version
+    Product_Control_System -[#Green]> Cloud_Services: Connected
+    Cloud_Services -[#Green]> Connectivity_Config: Check Version 
+    Product_Config -[#Green]> Connectivity_Config: Verify Versions Compatible
+
+
+    note left 
+    **Configuration Compatibility:**
+    Versions are verified by Configuration File Compatibility Number
+    from Main Folder Version Number.
     end note
     
 @enduml
