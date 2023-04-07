@@ -1,4 +1,4 @@
-@startuml Configuration_Process
+@startuml configuration_process
 
 
     autonumber

@@ -4,7 +4,7 @@ Configurations (IoT and Appliance)
 # Sequence Diagram
 
 <p align="center">
-  <img width="1000" src="./document_formats/Configuration_Process.png">
+  <img width="1000" src="./document_formats/configuration_process.png">
   </p>
 
 <!-- Notes
@@ -14,7 +14,7 @@ Configurations (IoT and Appliance)
 # Activity Diagram
 
 <p align="center">
-  <img width="500" src="./Images/out/Config_activity_diagram/Configurations.png">
+  <img width="500" src="./images/out/config_activity_diagram/configurations.png">
   </p>
 
 <!-- Notes
