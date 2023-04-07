@@ -84,7 +84,8 @@
     Product_Control_System -[#Green]> Cloud_Services_System: Connected
     Cloud_Services_System -[#Green]> Connectivity_Config: Check Version 
     Product_Config -[#Green]> Connectivity_Config: Verify Versions Compatible
-    Connectivity_Config -[#blue]> Connectivity_Config: Start Cloud Services for Mobile Application
+    Connectivity_Config -[#blue]> Connectivity_Config: Initiate Cloud Services for Mobile Application
+    Connectivity_Config -[#Blue]> Cloud_Services_System: Start Up Cloud Service with Product Services
 
 
     note left 
