@@ -1,0 +1,57 @@
+@startuml Configuration_Process
+
+
+    autonumber
+    actor Configuration_Engineer
+    actor Configuration_Architect
+
+    ==Configuration Data Structure==
+
+    Configuration_Architect -[#red]> Config_Tool : Update Data Structure
+    note left 
+    **Role and Accountability**
+    Maintains the data structure of the configuration file
+    to ensure it accounts for all configuration parameters 
+    within the Tech Stack of the Platform for a specific 
+    Product Portfolio. (ex. Cooking = Freestanding Oven, 
+    Induction Hobs, Radiant Hobs, Gas Hobs,Built In Ovens, 
+    Hoods, Microwaves).  This includes Product and Connectivity
+    Configuration Parameters.
+    end note
+    Config_Tool -[#red]> Product_Config : Update Data Structure
+    Config_Tool -[#red]> Connectivity_Config : Update Data Structure
+    Config_Tool -[#red]> Product_Config: Export Product Config UI
+    Config_Tool -[#red]> Product_Config: Export Product Config GPU
+    Config_Tool -[#red]> Product_Config: Export Product Config Touch
+    Config_Tool -[#red]> Product_Config: Export Product Config Graphical Assets
+    Config_Tool -[#red]> Product_Config: Export Product Config Main Control
+    Config_Tool -[#red]> Connectivity_Config: Export Connectivity Config Capabilities
+    Config_Tool -[#red]> Connectivity_Config: Export Connectivity Config States
+    Configuration_Architect -[#Green]> Config_Tool: Verify Data Structure for all exports
+    note right
+    **Role and Accountability**
+    Verify the Data Archicture is aligned with Category Configuration
+    Engineers, Software Category Engineers, Connectivity Engineers for 
+    Data Entry.
+    end note
+
+    ==Configuration Editing==
+
+    Configuration_Engineer -[#red]> Config_Tool : Software Update Available
+
+    ==Configurations Release==
+
+    Configuration_Engineer -[#red]> Product_Config : Software Update Available
+    
+    ==Configuration Deployment==
+
+   Configuration_Engineer -[#blue]> Product_Config: Software Update based on Scheduler
+    note left 
+    **Initial State:**
+    Electrical System is in IDLE/Standby State
+    This indicates if Electrical System was in Programming mode, 
+    after 5 minutes of no consumer activity the product will 
+    return to idle/standby.
+    end note
+    
+@enduml
