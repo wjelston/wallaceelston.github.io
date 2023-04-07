@@ -1,6 +1,6 @@
 Activity Diagram
 
-@startuml Configurations
+@startuml configuration
 
     scale 1
 
