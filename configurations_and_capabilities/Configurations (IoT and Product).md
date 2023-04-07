@@ -1,4 +1,4 @@
-Configurations (IoT and Appliance)
+configurations
 
 
 # Sequence Diagram
