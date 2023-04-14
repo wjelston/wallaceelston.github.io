@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "VS_DOCS_BB",
+			"path": "."
+		}
+	],
+	"settings": {
+		"jira-plugin.workingProject": ""
+	}
+}

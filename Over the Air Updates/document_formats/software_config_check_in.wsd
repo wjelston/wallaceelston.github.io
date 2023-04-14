@@ -1,0 +1,76 @@
+@startuml software_config_check_in
+
+
+    autonumber
+    actor SW_Developer
+    actor HMI_SW_Developer
+    actor MC_SW_Developer
+    actor SQA
+    actor Systems_Engineer
+    actor RTE
+
+    ==Software_Configuration_Test_Release_Process==
+
+    group Build and White Box Testing [White Box Testing Phase]
+        SW_Developer -[#blue]>  SW_Check_In_Development_Server: Compile/Check In SW MicroServices
+        Systems_Engineer -[#blue]>  SW_Check_In_Development_Server: Compile/Check In Configurations
+        Systems_Engineer -[#blue]>  SW_Check_In_Development_Server: Compile/Check In Capabilities and Settings
+        SW_Check_In_Development_Server -[#blue]>  SQA: Software Testing
+        SQA -[#blue]>  SW_Check_In_Development_Server: Pass Promote / Fail Reject
+        SW_Check_In_Development_Server -[#blue]>  SW_Check_In_Test_Server: Promoted from Dev to Test
+        SW_Check_In_Test_Server -[#blue]>  SQA: Software Testing
+        SQA -[#blue]>  SW_Check_In_Test_Server: Pass Promote / Fail Reject
+        SW_Check_In_Test_Server -[#blue]>  SW_Check_In_Release_Server: Promoted from Test to Release
+    end
+    note right
+    **White Box Testing Phase:** Software/Configurations/Capabilities Promoted, 
+    White Box Testing Phase to Subsystems Testing Phase
+    end note
+    group Subsystem Testing Phase [Subsystem Testing Phase]
+        SW_Check_In_Release_Server -[#blue]>  HMI_SW_Developer: Compile/Check In SW for HMI
+        SW_Check_In_Release_Server -[#blue]>  MC_SW_Developer: Compile/Check In SW for Main Control
+        HMI_SW_Developer -[#blue]>  RTE: Release Subsystem Software HMI
+        MC_SW_Developer -[#blue]>  RTE: Release Subsystem Software Main Control
+        Systems_Engineer -[#blue]>  RTE: Release Subsystem Configurations
+        Systems_Engineer -[#blue]>  RTE: Release Subsystem Capabilities and Settings
+        RTE -[#blue]>  RTE: Builds Software and Configurations Packages for Each Subsystem.
+        RTE -[#blue]>  Build_System: Release Build for HMI with Configurations.
+        RTE -[#blue]>  Build_System: Release Build for Main Control with Configurations.
+        Build_System -[#blue]> Systems_Engineer: Build System Notifies Systems Engineer for Programming in Labs.
+        Systems_Engineer -[#blue]> HIL_Tester: Subsystem Test of HMI Assembly with Configuration.
+        Systems_Engineer -[#blue]> HIL_Tester: Subsystem Test of Main Control Assembly with Configuration.
+        HIL_Tester -[#blue]> HIL_Tester: HMI Subsystem Passes Test.
+        HIL_Tester -[#blue]> Systems_Engineer: Subsystem Passed.
+        HIL_Tester -[#blue]> HIL_Tester: Main Control Subsystem Passes Test.
+        HIL_Tester -[#blue]> Systems_Engineer: Subsystem Passed.
+
+    end
+    note right
+    **SubSystems Testing Phase:** Software/Configurations/Capabilities Promoted, 
+    Subsystems Testing Phase to Systems Testing Phase.
+    end note
+    group System Testing Phase [Full Electrical System Testing Phase]
+        Systems_Engineer -[#blue]> Programming_Subsystems: Systems Engineer Programs all Subsystems.
+        Programming_Subsystems -[#blue]> Verification_Validation: Systems Engineer Programs all Subsystems in Lab.
+        Verification_Validation -[#blue]>  Verification_Validation: MVP or Passes Use Cases
+        Verification_Validation -[#blue]> Systems_Engineer: Systems Engineer Notified Verification and Validation Completed.
+        Systems_Engineer -[#blue]> RTE: Release Software, Configuration and Capabilities associated with Approval.
+    end
+    note left
+    **Systems Testing Phase:** Software/Configurations/Capabilities Promoted, 
+    Systems Testing Phase to Release Production Phase.
+    end note
+    group Release to Production Phase [TeamCenter Release Phase]
+         RTE -[#blue]> TeamCenter: RTE Creates CR/CN for Release to Production.
+         RTE -[#red]>  TeamCenter: Released SW for HMI
+         RTE -[#red]>  TeamCenter: Released SW for Main Control
+         RTE -[#red]>  TeamCenter: Released Configurations for System
+         RTE -[#red]>  TeamCenter: Released Capabilities for System
+    end
+    note left
+    **Production Release Phase:** Software, Configurations and Capabilities files tested during
+    each phase to be released on ECR and ECN.
+    end note
+
+    
+@enduml

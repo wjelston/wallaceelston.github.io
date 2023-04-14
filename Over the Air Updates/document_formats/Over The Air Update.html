@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Over The Air Update.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p>Over The Air Update</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#document-synopsis">Document Synopsis</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#stakeholder-requirements">Stakeholder Requirements</a></li>
+<li><a href="#kattegatt-poc">Kattegatt PoC</a></li>
+<li><a href="#software-team-delivery-process-and-tool-chain">Software Team Delivery Process and Tool Chain</a></li>
+<li><a href="#software-team-tech-stack-microservices-delivery">Software Team Tech Stack MicroServices Delivery</a></li>
+<li><a href="#over-the-air-overall-process">Over the Air Overall Process</a></li>
+<li><a href="#user-interface-software-builds">User Interface Software Builds</a></li>
+<li><a href="#main-control-software-builds">Main Control Software Builds</a></li>
+<li><a href="#auxiliary-boards-software-builds">Auxiliary Boards Software Builds</a></li>
+<li><a href="#connectivity-boards-software-builds">Connectivity Board Software Builds</a></li>
+<li><a href="#full-system-testing">Full System Testing</a></li>
+<li><a href="#cloud-delivery-method">Cloud Delivery Method</a></li>
+<li><a href="#electrical-system-update">Electrical System Update</a></li>
+<li><a href="#json-bundle-script">json Bundle Script</a></li>
+<li><a href="#dispatching-deployment">Dispatching Deployment</a></li>
+</ol>
+<!--
+Notes:
+- Design and Consumer Experience Requirements from Figma, Supernova, Flutter, React, SHAPE for Over the Air Update
+- Write up Synopsis
+- Share with Saili
+- Share with OTA Review this week.
+-->
+<h2 id="document-synopsis">Document Synopsis</h2>
+<p>This document includes the <span style="color:red;font-weight:700;font-size:14px"><code>Software Microservices</code></span> release process from the software team, the <span style="color:Red;font-weight:700;font-size:14px"> <code>Subsystems</code></span> <span style="color:Green;font-weight:700;font-size:14px"> for UI Assemblies, Main Control Assemblies, and Auxiliary Control Assemblies</span>  process for HIL testing of each subsystem, <span style="color:red;font-weight:700;font-size:14px"><code>Full Electrical Systems</code></span>  testing, and finally OTA Package delivery to the <span style="color:red;font-weight:700;font-size:14px"><code>Connectivity Servers</code></span> for deployment.  It also has links to the internal system deployment documentation within the system when the OTA bundle is delivered to the<span style="color:red;font-weight:700;font-size:14px;opacity: 1.0;"><code>product in the field</code></span>.</p>
+<p>This document will be the definition for the Process from <strong><code>Software</code></strong> check in of <code>micro services</code>, to the builds for development, test, release for verification and validation.</p>
+<p>This document will also show how the <code>configurations, capabilities and software</code> are coupled together for <code>Subsystems</code> such as User Interface Asemblies, Main Control Assemblies and Auxiliary Control Assemblies, thus allowing Subsystems to be verified and validated.</p>
+<p>In addition to Subsystems verification this document will define the <code>Systems</code> verification and validation for coupling all electronics with loads, sensors and switches for systems verification and validation to allow for <code>Full System Over the Air Updates</code>.</p>
+<p>At each stage of development, verification and validation this will require subsystem and systems items to be delivered to a Production Release Process, upon completion of verification and validation.</p>
+<h2 id="glossary">Glossary</h2>
+<p><a href="https://sdlcwiki.electrolux.com/pages/viewpage.action?spaceKey=ASTUESWA&amp;title=Glossary+@+ota">Glossary</a></p>
+<h2 id="stakeholder-requirements">Stakeholder Requirements</h2>
+<ol>
+<li>As a User I want to be able to remotely push software updates that increase the security, performance and/or capabilities of a single appliance or an ecosystem of appliances.</li>
+<li>As a User I want to be able to stay secure &amp; ​up-to-date with the latest features, so I can enjoy my product longer with new features throughout the life of the product.</li>
+<li>As a User I want to be able to add and remove apps from my product to tailor my product to my specific usage patterns and needs, as my life changes.</li>
+<li>As a User I should be able to choose when and which updates I want to apply to my product, based on my current lifestyle.</li>
+<li>As a User I should be able to apply full or partial updates at my convenience.</li>
+<li>As a User I should have a recovery mechanism such as Factory Defaults to return my product to a usable condition should an outage occur such as power, internet service provider, or WiFi Network.</li>
+<li>As a User I expect the full software update process from start (Time of Initiation) to end (Product is ready to use post software update) to take no more than 10 minutes, as these are my expectation from other devices I currently use.</li>
+</ol>
+<h2 id="kattegatt-poc">Kattegatt PoC</h2>
+<p align="center">
+  <img width="1200" src="../images/ucc_electrical_electronics_system_design.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="design-team-consumer-experience-and-interaction">Design Team Consumer Experience and Interaction</h2>
+<p>These are the links to the Design Teams Graphical Assets and Experiences as it pertains to the Over The Air Process on the Appliance Device and on the Mobile Device.</p>
+<ul>
+<li><a href="https://electrolux.sharepoint.com/:p:/r/sites/GlobalHMIUIStrategy/Shared%20Documents/Design/01%20Presentations/2022%20Sprint%20Reviews/Valhalla%20-%20Sprint%2017-18%20-%20LT%20OTA.pptx?d=w73e109c044eb45a48356c5eddb6070d2&amp;csf=1&amp;web=1&amp;e=ogmhcq&amp;nav=eyJzSWQiOjIxNDc0NzA4ODMsImNJZCI6MjgwNzM2NTczMn0">OTA Sharepoint Link</a></li>
+<li><a href="https://www.figma.com/file/wZxnB2zvGxjbsCnSkdYx00/Design---OTA-updates?node-id=0-1&amp;t=GSjXDAo0vJzmwF9I-0">OTA Figma Link</a></li>
+<li><a href="">OTA Framer Link - Pending</a></li>
+</ul>
+<h2 id="software-team-delivery-process-and-tool-chain">Software Team Delivery Process and Tool Chain</h2>
+<p>This is the process as defined by the <code>SQA (Software Quality Assurance)</code> Process Owner.  This <a href="https://electrolux-my.sharepoint.com/:p:/r/personal/francesco_giorgetti_electrolux_com/Documents/File%20di%20chat%20di%20Microsoft%20Teams/PoC_CICD_24Mar23.pptx?d=wfb85134533c94cc5b1b299dd8b17e390&amp;csf=1&amp;web=1&amp;e=SdDVeq">presentation</a> shows the process of micro services from contributors are pushed to the Continuous Development and Continuous Integration Services.  In addtiion it shows how code is checked in and to what service or tool, the build process, the test process, and then release of software services to be tested in Subsystems with Configurations.</p>
+<!-- Notes
+
+-->
+<p align="center">
+  <img width="1200" src="../images/ci_cd_process/slide1.jpeg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/ci_cd_process/slide2.jpeg">
+  </p>
+  <p align="center">
+  <img width="1200" src="../images/ci_cd_process/slide3.jpeg">
+  </p>
+  <p align="center">
+  <img width="1200" src="../images/ci_cd_process/slide4.jpeg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/ci_cd_process/slide5.jpeg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/ci_cd_process/slide6.jpeg">
+  </p>
+<h2 id="over-the-air-overall-process">Over the Air Overall Process</h2>
+<p>This should reflect the Overall Process for the Over the Air Update.</p>
+<p align="center">
+  <img width="1200" src="../images/over_the_air_overall_process.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="software-team-tech-stack-microservices-delivery">Software Team Tech Stack MicroServices Delivery</h2>
+<p align="center">
+  <img width="800" src="../images/tech_stack_delivery_teams.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="user-interface-software-builds">User Interface Software Builds</h2>
+<ul>
+<li>Hardware in Loop Testing</li>
+</ul>
+<p align="center">
+  <img width="800" src="../images/user_interface_sw_builds.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="main-control-software-builds">Main Control Software Builds</h2>
+<ul>
+<li>Hardware in Loop Testing</li>
+</ul>
+<p align="center">
+  <img width="800" src="../images/main_control_sw_builds.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="auxiliary-boards-software-builds">Auxiliary Boards Software Builds</h2>
+<ul>
+<li>Hardware in Loop Testing</li>
+</ul>
+<p align="center">
+  <img width="800" src="../images/auxiliary_boards_sw_builds.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="connectivity-boards-software-builds">Connectivity Boards Software Builds</h2>
+<ul>
+<li>Hardware in Loop Testing</li>
+</ul>
+<p align="center">
+  <img width="800" src="../images/auxiliary_boards_sw_builds.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="full-system-testing">Full System Testing</h2>
+<ul>
+<li>Full System Verification Testing</li>
+</ul>
+<p align="center">
+  <img width="1000" src="../images/ota_bundle_delivery.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="cloud-delivery-method">Cloud Delivery Method</h2>
+<p>This is defined by the connectivity cloud team of Principal Architect, Connectivity and Lead System Architect, Connectivity and reflects when the physical assets of software and configuration are delivered to the connectivity team how they deliver to the server for OTA deployment.</p>
+<p align="center">
+  <img width="500" src="../images/cloud_deployment_mechanism.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="electrical-system-update">Electrical System Update</h2>
+<p>Below are the links to the Confluence page pertaining to the Over the Air Process. <a href="https://sdlcwiki.electrolux.com/display/ASTUESWA/Over-The-Air+Connectivity+@+ota">Over The Air Connectivity @ OTA</a> Confluence Page.</p>
+<p align="center">
+  <img width="1000" src="../images/electrical_system_update_sequence.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="json-bundle-script">json Bundle Script</h2>
+<pre class="hljs"><code><div>{<span class="hljs-attr">"PNC"</span>: <span class="hljs-string">""</span>,
+<span class="hljs-attr">"Serial_Number"</span>:<span class="hljs-string">""</span>,
+<span class="hljs-attr">"Previous_System_CRChecksum"</span>:<span class="hljs-string">""</span>,
+<span class="hljs-attr">"New_System_CRChecksum"</span>:<span class="hljs-string">""</span>,
+<span class="hljs-attr">"Number_Of_Modules_To_Program"</span>:<span class="hljs-string">""</span>,
+<span class="hljs-attr">"System_Modules"</span>:
+    {
+    <span class="hljs-attr">"ANC_001"</span>:
+        {
+        <span class="hljs-attr">"ANC_Node_Number"</span>:<span class="hljs-string">""</span>,
+        <span class="hljs-attr">"Previous_ANC"</span>:
+            {
+            <span class="hljs-attr">"Previous_ANC_Part_Number"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"Previous_ANC_Version"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"Previous_ANC_Checksum"</span>:<span class="hljs-string">""</span>
+            },
+        <span class="hljs-attr">"New_ANC"</span>:
+            {
+            <span class="hljs-attr">"New_ANC_Part_Number"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"New_ANC_Version"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"New_URL"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"New_ANC_Checksum"</span>:<span class="hljs-string">""</span>
+            }
+        },
+    <span class="hljs-attr">"ANC_002"</span>:
+        {
+        <span class="hljs-attr">"ANC_Node_Number"</span>:<span class="hljs-string">""</span>,
+        <span class="hljs-attr">"Previous_ANC"</span>:
+            {
+            <span class="hljs-attr">"Previous_ANC_Part_Number"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"Previous_ANC_Version"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"Previous_ANC_Checksum"</span>:<span class="hljs-string">""</span>
+            },
+        <span class="hljs-attr">"New_ANC"</span>:
+            {
+            <span class="hljs-attr">"New_ANC_Part_Number"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"New_ANC_Version"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"New_URL"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"New_ANC_Checksum"</span>:<span class="hljs-string">""</span>
+            }
+        },
+    <span class="hljs-attr">"ANC_003"</span>:
+        {
+        <span class="hljs-attr">"ANC_Node_Number"</span>:<span class="hljs-string">""</span>,
+        <span class="hljs-attr">"Previous_ANC"</span>:
+            {
+            <span class="hljs-attr">"Previous_ANC_Part_Number"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"Previous_ANC_Version"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"Previous_ANC_Checksum"</span>:<span class="hljs-string">""</span>
+            },
+        <span class="hljs-attr">"New_ANC"</span>:
+            {
+            <span class="hljs-attr">"New_ANC_Part_Number"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"New_ANC_Version"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"New_URL"</span>:<span class="hljs-string">""</span>,
+            <span class="hljs-attr">"New_ANC_Checksum"</span>:<span class="hljs-string">""</span>
+            }
+        }
+    }
+}
+
+
+</div></code></pre>
+<h2 id="dispatching-deployment">Dispatching Deployment</h2>
+<p><a href="https://sdlcwiki.electrolux.com/pages/viewpage.action?spaceKey=ASTUESWA&amp;title=Over-The-Air+Connectivity+@+ota">Over the Air Connectivity @ OTA</a></p>
+<p><a href="https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota">Reprogramming Mechnanism</a></p>
+<ol>
+<li><a href="https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota">Bootloader</a> - Used to reset, erase and program the specific software for a specific micro.</li>
+<li><a href="">Programming Agent</a> - Used to Dispatch specific software to the specific node to be reprogrammed.</li>
+<li><a href="https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota">Scribe</a> - Ask Lucio is this would be something like your experience using FIT Table for setting partition areas to program specific sectors or pages based on the FIT Table for doing partial updates?</li>
+<li><a href="https://sdlcwiki.electrolux.com/display/ASTUESWA/Overview+@+ota">Bridge</a> - Used to allow the Programming Agent to reach other nodes in the system beyond the direct connection the Programming Agent or Master Programmer may have acess to.</li>
+<li><a href="https://sdlcwiki.electrolux.com/display/ASTUESWA/Open+points+@+ota">Open Points</a></li>
+</ol>
+
+</body>
+</html>
