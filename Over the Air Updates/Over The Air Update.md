@@ -249,7 +249,7 @@ This should reflect the Overall Process for the Over the Air Update.  Starting f
 
 [Release to TeamCenter Process Video](https://electrolux-my.sharepoint.com/:v:/r/personal/wallace_elston_electrolux_com/Documents/Video/OTA%20Process%20and%20Releasing%20to%20TeamCenter.mov?csf=1&web=1&e=H53b16)
 
-Example of this file is below at [Example OSD json Bundle](#example-osdjson-bundle-script)
+Example of this file is below at [Example OSD json Bundle](./document_formats/Folder_Structure.jpg)
 
 ## Releases <a name="releases"></a>
 
