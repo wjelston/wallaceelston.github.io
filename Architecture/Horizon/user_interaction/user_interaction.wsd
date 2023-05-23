@@ -1,0 +1,30 @@
+@startuml user_interaction
+
+autonumber
+actor Consumer
+==Consumer Interaction==
+alt Interaction_Timing
+Consumer -[#blue]>  User_Interface_Assembly: Key Press "Power" (0 mSec)
+activate Consumer #FFBBBB
+note left center
+**NOTE:** 
+Overall Timing Sequence of this Sequence
+Diagram shall be no more than 120mSec 
+from User Interaction to Audio and Displays
+are updated.
+end note
+User_Interface_Assembly -[#green]> Touch_Controller: Active Key Press (≈50 mSec +/- 10%)
+note right
+**NOTE:** 
+Ensure Valid Key Press by Debouncing 
+Key to ensure Active Key Press by User and 
+Not Noise or other Anomoly.
+end note
+Touch_Controller -[#green]> UI_MicroController:   Active Key Press (≈10 mSec +/- 10%)
+UI_MicroController -[#green]> Display: Activate Display Driver and Graphics (≈40 mSec +/- 10%)
+UI_MicroController -[#green]> Audio: Activate Audio Driver and Tones (≈20 mSec +/- 10%)
+UI_MicroController -[#green]> Communications: MACS-EVO Messages Wake all Nodes on Bus.
+Display -[#Red]> Consumer: Visual Elements Shown to User (0 mSec)
+deactivate Consumer
+end
+@enduml

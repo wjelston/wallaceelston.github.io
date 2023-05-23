@@ -1,0 +1,197 @@
+{
+  "package": {
+    "header": {
+      "magic_number": 4993459924623442227,
+      "package_format_version": 1,
+      "pnc": 0,
+      "elc": 0,
+      "sn": 0,
+      "asw_ver": 0,
+      "tab_pus_ofst": 81,
+      "tab_pus_size": 55,
+      "tab_sw_items_ofst": 136,
+      "tab_sw_items_size": 68,
+      "tab_plugins_ofst": 204,
+      "tab_plugins_size": 138,
+      "tab_routes_ofst": 342,
+      "tab_routes_size": 32,
+      "reboot_cfgs_ofst": 374,
+      "reboot_cfgs_size": 15,
+      "scripts_ofst": 389,
+      "scripts_size": 0,
+      "scripts_entry_point": 0
+    },
+    "tab_pus": [
+      {
+        "pu": 17,
+        "boot_act_order": 1,
+        "boot_act_stream": "c602b702b7",
+        "boot_act_baudrate": 9600,
+        "prog_order": 2,
+        "sw_item_codes": [
+          28
+        ],
+        "macs_connected": 0,
+        "sw_item_num": 1,
+        "boot_act_stream_size": 5,
+        "entry_size": 23
+      },
+      {
+        "pu": 18,
+        "boot_act_order": 2,
+        "boot_act_stream": "c9003e09f4000ac9003e02f40001",
+        "boot_act_baudrate": 9600,
+        "prog_order": 1,
+        "sw_item_codes": [
+          28
+        ],
+        "macs_connected": 1,
+        "sw_item_num": 1,
+        "boot_act_stream_size": 14,
+        "entry_size": 32
+      }
+    ],
+    "tab_sw_items": [
+      {
+        "pu": 17,
+        "sw_item_code": 28,
+        "scribe_code": 2,
+        "maps": [
+          {
+            "ini_addr": 8192,
+            "end_addr": 156348,
+            "memory_type": 0
+          }
+        ],
+        "id_string": "ARG.0002",
+        "ofst": 16944,
+        "size": 18412,
+        "memory_maps_num": 1,
+        "entry_size": 34
+      },
+      {
+        "pu": 18,
+        "sw_item_code": 28,
+        "scribe_code": 2,
+        "maps": [
+          {
+            "ini_addr": 8192,
+            "end_addr": 156348,
+            "memory_type": 0
+          }
+        ],
+        "id_string": "ARG.0002",
+        "ofst": 35356,
+        "size": 18412,
+        "memory_maps_num": 1,
+        "entry_size": 34
+      }
+    ],
+    "tab_routes": [
+      {
+        "ep_pu": 0,
+        "trg_pu": 17,
+        "max_baudrate": 115200,
+        "steps_num": 0,
+        "entry_size": 11
+      },
+      {
+        "ep_pu": 0,
+        "trg_pu": 18,
+        "max_baudrate": 115200,
+        "steps": [
+          {
+            "pu": 17,
+            "bridge_cfg": 1124680456,
+            "break_lvl": 1
+          }
+        ],
+        "steps_num": 1,
+        "entry_size": 21
+      }
+    ],
+    "tab_plugins": [
+      {
+        "pu": 17,
+        "code": 0,
+        "id_string": "PBM.I018",
+        "ofst": 0,
+        "size": 4224,
+        "entry_size": 23
+      },
+      {
+        "pu": 17,
+        "code": 1,
+        "id_string": "PBM.F018",
+        "ofst": 4224,
+        "size": 1120,
+        "entry_size": 23
+      },
+      {
+        "pu": 17,
+        "code": 2,
+        "id_string": "PBM.G018",
+        "ofst": 5344,
+        "size": 3128,
+        "entry_size": 23
+      },
+      {
+        "pu": 18,
+        "code": 0,
+        "id_string": "PBM.I118",
+        "ofst": 8472,
+        "size": 4224,
+        "entry_size": 23
+      },
+      {
+        "pu": 18,
+        "code": 1,
+        "id_string": "PBM.F018",
+        "ofst": 12696,
+        "size": 1120,
+        "entry_size": 23
+      },
+      {
+        "pu": 18,
+        "code": 2,
+        "id_string": "PBM.G018",
+        "ofst": 13816,
+        "size": 3128,
+        "entry_size": 23
+      }
+    ],
+    "reboot_cfgs": {
+      "entry_size": 15,
+      "steps_num": 1,
+      "steps": [
+        {
+          "pu": 17,
+          "bridge_cfg": 1124680456,
+          "break_lvl": 1
+        }
+      ]
+    },
+    "elfs": {
+      "plugins": {
+        "17": [
+          "PBM.I018.srec.elf",
+          "PBM.F018.srec.elf",
+          "PBM.G018.srec.elf"
+        ],
+        "18": [
+          "PBM.I118.srec.elf",
+          "PBM.F018.srec.elf",
+          "PBM.G018.srec.elf"
+        ]
+      },
+      "firmwares": {
+        "17": [
+          "ARG.0002.srec.elf"
+        ],
+        "18": [
+          "ARG.0002.srec.elf"
+        ]
+      }
+    }
+  }
+}

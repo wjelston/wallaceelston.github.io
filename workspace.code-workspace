@@ -3,6 +3,9 @@
 		{
 			"name": "VS_DOCS_BB",
 			"path": "."
+		},
+		{
+			"path": "Systems_Engineering"
 		}
 	],
 	"settings": {

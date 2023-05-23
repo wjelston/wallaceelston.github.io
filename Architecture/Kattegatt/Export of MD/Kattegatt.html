@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kattegatt.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="kattegatt">Kattegatt</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#product-categories-and-product-platform">Product Categories and Product Platform</a>
+<ol>
+<li><a href="#cooking">Cooking</a></li>
+<li><a href="#laundry">Laundry</a></li>
+<li><a href="#refrigeration">Refrigeration</a></li>
+</ol>
+</li>
+<li><a href="#global-strategy">Global Strategy</a></li>
+<li><a href="#one-pager-initiatives">One Pager of Initiatives</a></li>
+<li><a href="#kattegatt-slicepoc">Kattegatt Slice/PoC</a>
+<ol>
+<li><a href="#product-description">Product Description Kattegatt</a></li>
+<li><a href="#system-design">Systems Design Kattegatt</a></li>
+<li><a href="#flexible-architecture">Flexible Architecture</a></li>
+<li><a href="#use-case-cluster-electrical-and-electronics-system-design-for-poc">Use Case Cluster Electrical and Electronics System Design for PoC</a></li>
+<li><a href="#tech-stack-delivery-product-teams">Tech Stack Delivery Product Teams</a></li>
+<li><a href="#tech-stack-delivery-software-teams">Tech Stack Delivery Software Teams</a></li>
+<li><a href="#continuous-integrationcontinuous-development-video">Continuous Integration and Development</a></li>
+<li><a href="#outcomes-of-kattegatt">Outcomes Of Kattegatt</a></li>
+</ol>
+</li>
+<li><a href="#valhalla">Valhalla</a>
+<ol>
+<li><a href="#consumer-experience">Consumer Experience</a></li>
+<li><a href="#mechanical-architecture">Mechanical Architecture</a></li>
+<li><a href="#electrical-architecture">Electrical Architecture</a></li>
+<li><a href="#electronics-architecture">Electronics Architecture</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="product-categories-and-product-platform">Product Categories and Product Platform</h2>
+<p>Product Categories:</p>
+<p align="center">
+  <img width="1200" src="../images/consumer_experience/Slide8_Design_Complexity.jpeg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/product_portfolio.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h3 id="cooking">Cooking</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Platform</th>
+<th>Sub-Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cooking</td>
+<td>Built In Ovens</td>
+<td>Single</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Built In Ovens</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Built In Ovens</td>
+<td>Combo</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Built In Ovens</td>
+<td>Dedicated Microwave</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Free Standing Oven</td>
+<td>Single with Induction</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Free Standing Oven</td>
+<td>Single with Radiant</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Free Standing Oven</td>
+<td>Single with Gas</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Hobs/Cooktop</td>
+<td>Induction</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Hobs/Cooktop</td>
+<td>Radiant</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Hobs/Cooktop</td>
+<td>Gas</td>
+</tr>
+<tr>
+<td>Cooking</td>
+<td>Hoods</td>
+<td>Single</td>
+</tr>
+</tbody>
+</table>
+<h3 id="laundry">Laundry</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Platform</th>
+<th>Sub-Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laundry</td>
+<td>Washer</td>
+<td>Front Load</td>
+</tr>
+<tr>
+<td>Laundry</td>
+<td>Washer</td>
+<td>Top Load</td>
+</tr>
+<tr>
+<td>Laundry</td>
+<td>Dryer</td>
+<td>Single</td>
+</tr>
+<tr>
+<td>Laundry</td>
+<td>Combo</td>
+<td>Single</td>
+</tr>
+</tbody>
+</table>
+<h3 id="refrigeration">Refrigeration</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Platform</th>
+<th>Sub-Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refrigeration</td>
+<td>Side By Side</td>
+<td>Side By Side</td>
+</tr>
+<tr>
+<td>Refrigeration</td>
+<td>Side By Side</td>
+<td>FDBM</td>
+</tr>
+<tr>
+<td>Refrigeration</td>
+<td>Side By Side</td>
+<td>Multi Door</td>
+</tr>
+<tr>
+<td>Refrigeration</td>
+<td>Top Mount</td>
+<td>Bottom Mount</td>
+</tr>
+<tr>
+<td>Refrigeration</td>
+<td>Freezers</td>
+<td>Ice Chest</td>
+</tr>
+</tbody>
+</table>
+<h2 id="global-strategy">Global Strategy</h2>
+<p>Strategy to support all regions across all product categories.</p>
+<p align="center">
+  <img width="1200" src="../images/global_organization.png">
+  </p>
+<!-- Notes
+
+-->
+<ol>
+<li>Europe</li>
+<li>North America/Canada</li>
+<li>South America</li>
+<li>Asia</li>
+</ol>
+<h2 id="one-pager-initiatives">One Pager Initiatives</h2>
+<p align="center">
+  <img width="1200" src="../images/initiative_one_pager.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h2 id="kattegatt-slicepoc">Kattegatt Slice/PoC</h2>
+<h3 id="product-description">Product Description</h3>
+<p><a href="https://www.electrolux.com/en/p/kitchen/wall-ovens/single-wall-ovens/ECWS3012AS"><strong>BIO_ECWS3012AS-OL</strong></a>
+Single Built In Oven Product Platform</p>
+<p align="center">
+  <img width="1200" src="../images/BIO_ECWS3012AS-OL.png">
+  </p>
+<p>Control Panel for Built In Oven</p>
+<p align="center">
+  <img width="1200" src="../images/ECWS3012AS-CRL.png">
+  </p>
+<h3 id="system-design">System Design</h3>
+<p align="center">
+  <img width="1200" src="../images/UCC_Electrical_Electronics_System_Design.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h3 id="flexible-architecture">Flexible Architecture</h3>
+<p align="center">
+  <img width="1200" src="../images/PoC_Flexible_Platform.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h3 id="use-case-cluster-electrical-and-electronics-system-design-for-poc">Use Case Cluster Electrical and Electronics System Design for PoC</h3>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_1.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_2.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_3.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_4.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_5.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_6.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_7.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_8.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_9.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_10.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_11.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_12.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_13.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_14.jpg">
+  </p>
+<p align="center">
+  <img width="1200" src="../images/UCC/UCC_and_Target_Architecture_15.jpg">
+  </p>
+<!-- Notes
+
+
+-->
+<h3 id="tech-stack-delivery-product-teams">Tech Stack Delivery Product Teams</h3>
+<p align="center">
+  <img width="1200" src="../images/Build_and_Partitioning_TEAM_Aligned_Tech_Stack.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h3 id="tech-stack-delivery-software-teams">Tech Stack Delivery Software Teams</h3>
+<p align="center">
+  <img width="1200" src="../images/Tech_Stack_Delivery_Teams.jpg">
+  </p>
+<!-- Notes
+
+-->
+<h3 id="continuous-integrationcontinuous-development-video">Continuous Integration/Continuous Development Video</h3>
+<p><a href="https://electrolux-my.sharepoint.com/personal/francesco_giorgetti_electrolux_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Ffrancesco%5Fgiorgetti%5Felectrolux%5Fcom%2FDocuments%2FFile%20di%20chat%20di%20Microsoft%20Teams%2FCI%5FCD%20meeting%2D20230324%5F113819%2DRegistrazione%20della%20riunione%20%281%29%2Emp4&amp;referrer=Teams%2ETEAMS%2DELECTRON&amp;referrerScenario=p2p%5Fns%2Dbim&amp;ga=1"><img src="../images/CI_CD_Meeting.png" alt="Continuous Integration/Continuous Development"></a></p>
+<h2 id="outcomes-of-kattegatt">Outcomes of Kattegatt</h2>
+<p>Initiatives:</p>
+<ol>
+<li>Valhalla UI Initiative to continue using the PoC (i.e. EPU = MPU/MCU)</li>
+<li>UDA Initiative to Continue</li>
+<li>UEA/UESWA Initiatives are part of the tech stack and should continue.</li>
+<li>Start a initiative with the Main Control Boards to integrate the inverter/motor control.</li>
+</ol>
+<p>What we need from BCG is a plan for the following:</p>
+<ol>
+<li>Way of Working – Agile across the teams.</li>
+<li>Budget to fund initiatives</li>
+<li>UCC aligned to these Initiatives</li>
+<li>Teams with Product Owners, Scrum Masters, contributing to the initiatives.</li>
+<li>Product Suites aligned with the business proposal for profitability OR Strategic Market Objectives
+Right Now I see they are validating strategies and initiatives we already have in place, and I want to ensure the outcomes of the work BCG is sustainable for the inititiaves…</li>
+</ol>
+<h2 id="valhalla"><strong>Valhalla</strong></h2>
+<p><strong>Goals:</strong></p>
+<ol>
+<li>Common Consumer Experience</li>
+<li>Common Mechanical Architecture</li>
+<li>Common Electrical Architecture with UDA</li>
+<li>Common Electronics Architecture using UEHWA and UESWA</li>
+</ol>
+<h4 id="roadmap-vision">Roadmap Vision</h4>
+<p align="center">
+  <img width="1200" src="../images/consumer_experience/Slide40_Initial_Vision.jpeg">
+  </p>
+<h3 id="consumer-experience">Consumer Experience</h3>
+<h4 id="current-ux-debt-project-by-project">Current Ux Debt Project by Project</h4>
+<p align="center">
+  <img width="1200" src="../images/consumer_experience/Slide7_Ux_Debt.jpeg">
+  </p>
+<h4 id="interaction-layers">Interaction Layers</h4>
+<p align="center">
+  <img width="1200" src="../images/consumer_experience/Slide10_Component_Layers.jpeg">
+  </p>
+<h4 id="reusable-widgets">Reusable Widgets</h4>
+<p align="center">
+  <img width="1200" src="../images/consumer_experience/Slide18_Reusable_Widgets.jpeg">
+  </p>
+<h4 id="modalities-and-goodbetterbest">Modalities and Good/Better/Best</h4>
+<p align="center">
+  <img width="1200" src="../images/consumer_experience/Slide25_Good_Better_Best.jpeg">
+  </p>
+<h4 id="cross-product-solutions">Cross Product Solutions</h4>
+<p align="center">
+  <img width="1200" src="../images/consumer_experience/Slide14_Cross_Product.jpeg">
+  </p>
+<h3 id="mechanical-architecture">Mechanical Architecture</h3>
+<h4 id="process-for-mechanical-constraints">Process for Mechanical Constraints</h4>
+<p align="center">
+  <img width="1200" src="../images/mechanical/cooking/Slide2_Process.jpeg">
+  </p>
+<h4 id="cooking">Cooking</h4>
+<p><strong>Clustering</strong></p>
+<p align="center">
+  <img width="1200" src="../images/mechanical/cooking/Slide3_Clustering.jpeg">
+  </p>
+<p><strong>Envelopes</strong></p>
+<p align="center">
+  <img width="1200" src="../images/mechanical/cooking/Slide5_Envelopes.jpeg">
+  </p>
+<p><strong>Assemblies</strong></p>
+<p align="center">
+  <img width="1200" src="../images/mechanical/cooking/Slide7_assembly.jpeg">
+  </p>
+<h4 id="laundry-dish">Laundry Dish</h4>
+<p><strong>Clustering</strong></p>
+<p align="center">
+  <img width="1200" src="../images/mechanical/laundry_dish/Slide1_Clustering.jpeg">
+  </p>
+<p><strong>Compound Shapes</strong></p>
+<p align="center">
+  <img width="1200" src="../images/mechanical/laundry_dish/Slide2_Shapes.jpeg">
+  </p>
+<p><strong>Envelopes</strong></p>
+<p align="center">
+  <img width="1200" src="../images/mechanical/laundry_dish/Slide4_envelopes.jpeg">
+  </p>
+<h4 id="refrigeration">Refrigeration</h4>
+<p><strong>Current</strong></p>
+<p align="center">
+  <img width="1200" src="../images/mechanical/refrigeration/Slide3_Current.jpeg">
+  </p>
+<p><strong>Clustering</strong></p>
+<p align="center">
+  <img width="1200" src="../images/mechanical/refrigeration/Slide7_Clustering.jpeg">
+  </p>
+<p><strong>Envelopes</strong></p>
+<p align="center">
+  <img width="1200" src="../images/mechanical/refrigeration/Slide9_envelopes.jpeg">
+  </p>
+<h4 id="all-categories">All Categories</h4>
+<p><strong>Outcomes - All Categories</strong></p>
+<p align="center">
+  <img width="1200" src="../images/consumer_experience/Slide17_Mechanical_Landscape.jpeg">
+  </p>
+<h3 id="electrical-architecture">Electrical Architecture</h3>
+<p>Horizon Systems Architecture:</p>
+<h4 id="appliance-states-and-modes">Appliance States and Modes</h4>
+<p>Appliance modes</p>
+<ol>
+<li>Off Mode</li>
+<li>User Mode (Default Mode)</li>
+<li>Demo Mode</li>
+<li>Sabbath Mode</li>
+<li>Programming Mode</li>
+<li>Diagnostics Mode</li>
+</ol>
+<p>Appliance States</p>
+<ol>
+<li>Disconnected State</li>
+<li>Initialization State</li>
+<li>Standby State</li>
+<li>Delay Start State</li>
+<li>Active State</li>
+<li>Error State</li>
+</ol>
+<p>Subsystems:</p>
+<ol>
+<li>UI/HMI</li>
+<li>Main Control Board</li>
+<li>Auxiliary Control Boards</li>
+<li>Sensors</li>
+<li>Loads</li>
+<li>Switches</li>
+<li>Harnesses/Connections</li>
+</ol>
+<p>Features:</p>
+<ol>
+<li>Temperature</li>
+<li>Standby</li>
+<li>Programming and Reprogramming</li>
+<li>Factory</li>
+<li>Service</li>
+<li>ECM</li>
+<li>Connectivity OTA</li>
+<li>Connectivity</li>
+<li>Provisioning</li>
+<li>Claiming</li>
+<li>Security and Privacy</li>
+<li>Over The Air Update</li>
+<li>Power Loss and Recovery</li>
+<li>Initialization and Configuration</li>
+<li></li>
+<li>Operations</li>
+<li>Operands (Start and Cancel)</li>
+<li>Input Power requirements (Globally)</li>
+<li>Reboot</li>
+<li>Restore Factory Default</li>
+<li>Error Codes/Alarms</li>
+<li>Process = Cycle Performance</li>
+<li>Cycles</li>
+<li>Phases</li>
+<li>Sequences/Cycle Design?</li>
+<li>Algorithms</li>
+<li>State Machine</li>
+<li>Cycle Design</li>
+<li>Parameters</li>
+<li>Verification and Validation</li>
+<li>Performance team requirements (tuning product requirements to drive development speed and tools)</li>
+<li>Lab Testing</li>
+<li>Factory Testing and Manual Verification</li>
+<li>Service Testing and Automatic Verification</li>
+<li>Control Settings</li>
+<li>General</li>
+<li>About</li>
+<li>Control Version</li>
+<li>HMI Software Version</li>
+<li>HMI Configuration Version</li>
+<li>NIU Software Version</li>
+<li>NIU Configuration Version</li>
+<li>Control Board Software Version</li>
+<li>Control Board Configuration Version</li>
+<li>Control Board</li>
+<li>Software Update</li>
+<li>Latest Software Version</li>
+<li>Update Software Version, if available</li>
+<li>Yes</li>
+<li>No</li>
+<li>Connectivity</li>
+<li>Wireless Network</li>
+<li>Features</li>
+<li>Smart Grid
+<ol>
+<li>Opt In</li>
+<li>Opt Out</li>
+</ol>
+</li>
+<li>Data Analytics
+<ol>
+<li>Opt In</li>
+<li>Opt Out</li>
+</ol>
+</li>
+<li>WiFi
+<ol>
+<li>On/Off</li>
+<li>Status:
+<ol>
+<li>Provisioning</li>
+<li>Deprovisioning</li>
+</ol>
+</li>
+<li>WiFi Network Connected</li>
+<li>WiFi Signal Strength</li>
+</ol>
+</li>
+<li>BLE
+<ol>
+<li>On/Off</li>
+<li>BLE Network
+<ol>
+<li>Pair</li>
+<li>Unpair</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Time of Day
+<ol>
+<li>12 Hour/24 Hour</li>
+<li>Time of Day Manual</li>
+<li>Time of Day Automatic (Connected Appliances Only)</li>
+</ol>
+</li>
+<li>Audio
+<ol>
+<li>Volume Level</li>
+<li>End of Cycle Tone</li>
+<li>Key Press Tone</li>
+</ol>
+</li>
+<li>Display &amp; Brightness
+<ol>
+<li>Backlight Brightness</li>
+<li>Display Theme</li>
+</ol>
+</li>
+<li>Control Lock
+<ol>
+<li>Control Locked</li>
+<li>Control Unlocked</li>
+</ol>
+</li>
+<li>Calibration:
+<ol>
+<li>Cooking
+<ol>
+<li>Hobs</li>
+<li>Ovens
+<ol>
+<li>Temperature Offset</li>
+</ol>
+</li>
+<li>Hoods</li>
+</ol>
+</li>
+<li>Laundry</li>
+<li>Washers</li>
+<li>Dryers</li>
+<li>Dishwashers</li>
+<li>Refrigerators</li>
+</ol>
+</li>
+<li>Modes:
+<ol>
+<li>Sabbath Mode</li>
+<li>Demo Mode</li>
+</ol>
+</li>
+<li>Service Mode
+<ol>
+<li>Diagnostics Auto Routine</li>
+<li>Results from Auto Routine</li>
+<li>Error Failure Codes and Descriptions</li>
+<li>System Reboot</li>
+<li>Factory Mode/Verification and Validation Mode</li>
+<li>Diagnostics Manual</li>
+<li>Turn On Loads</li>
+<li>Read Sensors/Switches</li>
+<li>Restore Factory Reset</li>
+</ol>
+</li>
+</ol>
+<p>Unified Data Architecture</p>
+<p align="center">
+  <img width="1200" src="../images/UDA/Slide3.jpeg">
+  </p>
+<h3 id="electronics-architecture">Electronics Architecture</h3>
+<h4 id="uea---unified-electronics-hardware-architecture">UEA - Unified Electronics Hardware Architecture</h4>
+<p align="center">
+  <img width="1200" src="../images/UEA/Slide8_UEA_HW.jpeg">
+  </p>
+<h4 id="ueswa---unified-electronics-software-architecture">UESWA - Unified Electronics Software Architecture</h4>
+<p align="center">
+  <img width="1200" src="../images/UEA/Slide17_UEA_SW.jpeg">
+  </p>
+
+</body>
+</html>

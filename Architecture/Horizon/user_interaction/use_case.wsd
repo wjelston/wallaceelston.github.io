@@ -1,0 +1,20 @@
+@startuml
+skinparam actorStyle awesome
+left to right direction
+actor "Consumer" as C
+rectangle Refrigerator {
+  usecase "Dispense Ice" as UC1
+  usecase "Dispense Water" as UC2
+  usecase "Change Main Compartment Temperature" as UC3
+  usecase "Change Freezer Compartment Temperature" as UC4
+  usecase "Enable Defrost" as UC5
+  usecase "Enable Sabbath" as UC6
+}
+C --> UC1
+C --> UC2
+C --> UC3
+C --> UC4
+C --> UC5
+C --> UC6
+
+@enduml

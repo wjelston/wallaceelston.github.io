@@ -1,0 +1,44 @@
+@startuml process
+
+
+    autonumber
+    actor Consumer
+
+
+    ==Electrical System Cooking Example==
+    Consumer -[#blue]> HMI_Assembly_NIU: Bake
+    Consumer -[#blue]> HMI_Assembly_NIU: 350F
+    Consumer -[#blue]> HMI_Assembly_NIU: Start
+    HMI_Assembly_NIU -[#red]> Main_Control_Assembly : Cycle==Bake, Target_Temp==176.7C, SET;
+    Main_Control_Assembly -[#red]> Main_Control_Assembly: Door_CLOSED
+    Main_Control_Assembly -[#red]> Main_Control_Assembly: Bake_Relay_ON;
+    Main_Control_Assembly -[#red]> Main_Control_Assembly: Broil_Relay_ON;
+    Main_Control_Assembly -[#red]> HMI_Assembly_NIU: State==Running; Cycle== Bake; Target_Temp.==176.7C; Actual_Temp==21.1C;
+    HMI_Assembly_NIU -[#blue]> Consumer: Cycle==Bake; Target_Temp.==176.1C; Actual_Temp==21.1C; Door==Closed;
+    HMI_Assembly_NIU -[#green]> Connectivity: State==Running; Cycle==Bake; Target_Temp.==176.1C; Actual_Temp==21.1C; Door==Closed;
+    Connectivity -[#green]> Mobile_App: State==Running; Cycle==Bake; Target_Temp.==176.1C; Actual_Temp==21.1C; Door==Closed;
+    Mobile_App -[#green]> Consumer: Cycle==Bake; Target_Temp.==176.1C; Actual_Temp==21.1C; Door==Closed;
+    Moblie_App -[#orange]> HMI_Assembly_NIU: "HAN": State==Running; Cycle==Bake; Target_Temp.==176.1C; Actual_Temp==21.1C; Door==Closed;
+   note left 
+    **HAN (Home Area Network)**
+    end note
+
+    ==Electrical System Laundry Example==
+    Consumer -[#blue]> HMI_Assembly_NIU: Normal
+    Consumer -[#blue]> HMI_Assembly_NIU: Heavy
+    Consumer -[#blue]> HMI_Assembly_NIU: High
+    HMI_Assembly_NIU -[#red]> Main_Control_Assembly : Cycle==Normal, Soil_Level==Heavy, Water_Level==High; SET;
+    Main_Control_Assembly -[#red]> Main_Control_Assembly: Door_CLOSED
+    Main_Control_Assembly -[#red]> Main_Control_Assembly: Hot_Water_Relay_ON;
+    Main_Control_Assembly -[#red]> Main_Control_Assembly: Cold_Water_Relay_ON;
+    Main_Control_Assembly -[#red]> Main_Control_Assembly: Drum_Motor_Relay_ON;
+    Main_Control_Assembly -[#red]> HMI_Assembly_NIU: State==Running; Cycle==Normal, Soil_Level==Heavy, Water_Level==High;
+    HMI_Assembly_NIU -[#blue]> Consumer: State==Running; Cycle==Normal, Soil_Level==Heavy, Water_Level==High; Door==Closed;
+    HMI_Assembly_NIU -[#green]> Connectivity: State==Running; Cycle==Normal, Soil_Level==Heavy, Water_Level==High; Door==Closed;
+    Connectivity -[#green]> Mobile_App: State==Running; Cycle==Normal, Soil_Level==Heavy, Water_Level==High; Door==Closed;
+    Mobile_App -[#green]> Consumer: State==Running; Cycle==Normal, Soil_Level==Heavy, Water_Level==High; Door==Closed;
+    Moblie_App -[#orange]> HMI_Assembly_NIU: "HAN": State==Running; Cycle==Normal, Soil_Level==Heavy, Water_Level==High; Door==Closed;
+   note left 
+    **HAN (Home Area Network)**
+    end note
+@enduml
